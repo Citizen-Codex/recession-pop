@@ -3,7 +3,8 @@
 </script>
 
 <!-- Background -->
-<div class="bg-black-cc min-h-screen w-full absolute top-0 left-0">
+<div class="h-full w-full absolute top-0 left-0 overflow-hidden">
+    <img src="assets/Hero.png" alt="Hero" class="object-cover w-full h-full" />
 </div>
 
 <!-- Wordmark -->
