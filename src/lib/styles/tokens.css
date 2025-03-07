@@ -1,0 +1,45 @@
+@theme {
+  --font-serif: 'NotoSerif', 'serif';
+  --font-mono: 'RobotoMono', 'monospace';
+
+  --color-yellow: #DCBE6E;
+  --color-pink: #EE95E6;
+  --color-black-offset: #292929;
+  --color-white-offset: #FFF9F2;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-red: #D65E39;
+  --color-blue: #4A8A9A;
+  --color-green: #28644E;
+  --color-black-cc: #121212;
+  --color-yellow-cc: #FFE00D;
+}
+
+
+@utility heading {
+  @apply font-serif text-5xl font-semibold text-black leading-none;
+}
+
+@utility subheading {
+  @apply font-serif text-2xl text-black-offset leading-7;
+}
+
+@utility body {
+  @apply font-serif text-lg text-black;
+}
+
+@utility cta {
+  @apply font-mono font-medium text-xl leading-none uppercase;
+}
+
+@utility content-well-small {
+  @apply max-w-md w-full mx-auto px-4;
+}
+
+@utility content-well-medium {
+  @apply w-full max-w-3xl px-4 md:px-8;
+}
+
+@utility content-well-large {
+  @apply w-full px-4 md:px-8;
+}

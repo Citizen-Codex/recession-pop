@@ -1,5 +1,7 @@
 <script lang="ts">
-	import '../app.css';
+	import '$lib/styles/app.css';
+	import 'iconify-icon';
+
 	let { children } = $props();
 </script>
 

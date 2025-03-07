@@ -1,0 +1,10 @@
+hed: [HEADING]
+dek: [DESCRIPTION]
+cta-explore: Explore the data
+cta-solutions: Jump to solutions
+
+
+chapter-1:
+  hed: [SUBHEADING]
+  dek: [DESCRIPTION]
+  content: [CONTENT]

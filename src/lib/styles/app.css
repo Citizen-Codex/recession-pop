@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import './fonts.css';
+@import './tokens.css';
+
+@layer base {
+  :root {
+    @apply font-serif;
+  }
+
+  iconify-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+}
