@@ -1,18 +1,15 @@
 @theme {
-  --font-serif: 'NotoSerif', 'serif';
+  --font-serif: 'Junicode', 'serif';
   --font-mono: 'RobotoMono', 'monospace';
 
-  --color-yellow: #DCBE6E;
-  --color-pink: #EE95E6;
   --color-black-offset: #292929;
   --color-white-offset: #FFF9F2;
   --color-white: #FFFFFF;
   --color-black: #000000;
-  --color-red: #D65E39;
-  --color-blue: #4A8A9A;
-  --color-green: #28644E;
   --color-black-cc: #121212;
   --color-yellow-cc: #FFE00D;
+  --color-purple: #9A4BFE;
+  --color-gray: #4E4E4E;
 }
 
 
@@ -21,7 +18,11 @@
 }
 
 @utility subheading {
-  @apply font-serif text-2xl text-black-offset leading-7;
+  @apply font-serif text-2xl font-semibold text-black-offset leading-7;
+}
+
+@utility credits {
+  @apply font-mono tracking-wide font-medium text-white leading-7 uppercase;
 }
 
 @utility body {
