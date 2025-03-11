@@ -20,4 +20,8 @@
         width: 120px;
         cursor: pointer;
     }
+
+    .audio-icon:hover {
+        transform: scale(1.025);
+    }
 </style>
