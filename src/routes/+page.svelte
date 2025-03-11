@@ -1,12 +1,18 @@
 <script lang="ts">
 	import Hero from '$lib/components/sections/Hero.svelte';
+	import Songs from '$lib/components/sections/Songs.svelte';
 
 	const { data } = $props();
 
 	$inspect(data);
 </script>
 
-<Hero />
+<div class = "">
+	<Hero />
+</div>
 
 
-<section class="h-screen bg-white"></section>
+<div class="max-w-2xl flex items-center justify-center min-h-screen mx-auto">
+	<Songs />
+  </div>
+  

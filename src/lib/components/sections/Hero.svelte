@@ -7,13 +7,12 @@
 </script>
 
 
-<!-- Background -->
-<div class="fixed inset-0 -z-10 flex items-center justify-center overflow-hidden">
-	<Background />
-</div>
-
-<!-- Content -->
 <section class="relative flex h-screen w-full flex-col items-center justify-center text-center">
+
+	<div class="absolute inset-0 -z-10">
+		<Background />
+	</div>
+	
 	<Wordmark />	
 
 	<div class="relative flex flex-col items-center gap-12">
