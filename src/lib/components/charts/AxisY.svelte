@@ -40,7 +40,7 @@
     export let dy = -3;
   
     /** @type {Number} [charPixelWidth=7.25] - Used to calculate the widest label length to offset labels. Adjust if the automatic tick length doesn't look right because you have a bigger font (or just set `tickMarkLength` to a pixel value). */
-    export let charPixelWidth = 7.25;
+    export let charPixelWidth = 20;
   
     /** @type {String} units - Whether this component should use percentage or pixel values. If `percentRange={true}` it defaults to `'%'`. Options: `'%'` or `'px'`. */
     export let units = $percentRange === true ? '%' : 'px';
@@ -95,12 +95,14 @@
         {#if tickMarks === true}
           <div class="tick-mark" style:top="0" style:left="{x1}px" style:width="{tickLen}px"></div>
         {/if}
+
+        <!-- adjust y label positions in style:left -->
         <div
           class="text"
           style:top="0"
           style:text-align={labelPosition === 'even' ? 'right' : 'left'}
           style:width="{widestTickLen}px"
-          style:left="{-widestTickLen - tickGutter - (labelPosition === 'even' ? tickLen : 0)}px"
+          style:left="{-widestTickLen - tickGutter - (labelPosition === 'even' ? tickLen : 0) - 10}px" 
           style:transform="translate({dx + (labelPosition === 'even' ? -3 : 0)}px, calc(-50% + {dy +
             (labelPosition === 'above' ||
             (snapBaselineLabel === true && tickValUnits === maxTickValUnits)
@@ -127,12 +129,13 @@
       height: 100%;
     }
     .tick {
-      font-size: 11px;
+      font-size: 14px;
       width: 100%;
+      font-family: var(--font-mono);
     }
   
     .gridline {
-      border-top: 1px dashed #aaa;
+      border-top: 1px solid #aaa;
     }
     .tick-mark {
       border-top: 1px solid #aaa;

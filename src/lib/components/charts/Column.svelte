@@ -8,10 +8,10 @@
   const { data, xGet, yGet, x, yRange, xScale, y, height } = getContext('LayerCake');
 
   /** @type {String} [fill='#00e047'] - The shape's fill color. */
-  export let fill = '#00e047';
+  export let fill = "";
 
   /** @type {String} [stroke='#000'] - The shape's stroke color. */
-  export let stroke = '#000';
+  export let stroke = 'none';
 
   /** @type {Number} [strokeWidth=0] - The shape's stroke width. */
   export let strokeWidth = 0;
@@ -45,7 +45,7 @@
       y={$yGet(d)}
       width={colWidth}
       height={colHeight}
-      {fill}
+      fill={fill} 
       {stroke}
       stroke-width={strokeWidth}
     />

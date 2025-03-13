@@ -1,10 +1,14 @@
-<div class="h-full w-full absolute top-0 left-0 overflow-hidden">
+<section class="h-full w-full absolute top-0 left-0 overflow-hidden bg-black"></section>
+
+
+
+<!-- <div class="h-full w-full absolute top-0 left-0 overflow-hidden">
     <img 
         src="assets/Hero.png" 
         alt="Hero" 
         class="object-cover w-full h-full rotating-image" 
     />
-</div>
+</div> -->
 
 
 
