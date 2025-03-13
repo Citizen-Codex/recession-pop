@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Background from '$lib/components/helpers/HeroBackground.svelte';
 	import Wordmark from '$lib/components/helpers/Wordmark.svelte';
+	import Window from '$lib/components/helpers/Window.svelte';
 	import Audio from '$lib/components/helpers/Audio.svelte';
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
@@ -23,7 +24,9 @@
 		</div>
 
 		<!-- Subheading -->
-		<p class="subheading p-6 px-24 text-black font-b bg-white border-gray border-2 shadow-[4px_4px_var(--color-purple)] max-w-xl">{page.data.dek}</p>
+		<div class="-mt-20">
+			<Window content="{page.data.dek}"/>
+		</div>
 
 		<!-- Credits -->
 		<p class="credits">
