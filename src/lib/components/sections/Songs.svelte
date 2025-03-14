@@ -57,7 +57,16 @@
 
 </script>
 
+<div class="w-10 h-10 bg-red-600"
+on:mouseover={() => console.log('Hovered!')}>
+</div>
+
 <div class="chart-container">
+
+  <div class="w-10 h-10 bg-white"
+on:mouseover={() => console.log('Hovered also!')}>
+</div>
+
   <LayerCake
     ssr
     percentRange
@@ -99,6 +108,7 @@
                 opacity="1"
                 rx="0.2"
                 ry="0.2"
+                on:mouseover={() => console.log(`Song: ${song.song}`)}
               />
               {/each}
             </g>
@@ -119,11 +129,12 @@
     width: 100%;
     height: 350px;
     position: relative;
+    pointer-events: auto;
   }
 
   .cell {
     stroke: black;
     stroke-width: 0.25px;
-    pointer-events: all; 
+    pointer-events: all;
   }
 </style>
