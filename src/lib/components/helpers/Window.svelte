@@ -6,9 +6,9 @@
     <!-- window bar -->
     <div class="relative top-0 left-0 w-full h-8 bg-white rounded-t-lg border-x-2 border-t-2 border-gray bg-gradient-to-b from-transparent to-black/20 flex items-center justify-left gap-1">
         <!-- circles -->
-        <div class="red w-5 h-5 border-2 border-gray rounded-full ml-1.5"></div>
-        <div class="yellow w-5 h-5 border-2 border-gray rounded-full"></div>
-        <div class="green w-5 h-5 border-2 border-gray rounded-full"></div>
+        <div class="red w-4.5 h-4.5 border-2 border-gray rounded-full ml-1.5"></div>
+        <div class="yellow w-4.5 h-4.5 border-2 border-gray rounded-full"></div>
+        <div class="green w-4.5 h-4.5 border-2 border-gray rounded-full"></div>
     </div>
 
     <!-- content -->

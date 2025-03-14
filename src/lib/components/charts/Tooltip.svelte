@@ -7,7 +7,7 @@
   export let evt = {};
 
 	/** @type {Number} [offset=-35] – A y-offset from the hover point, in pixels. */
-  export let offset = -35;
+  export let offset = -10;
 </script>
 
 <style>
@@ -16,11 +16,13 @@
     width: 150px;
     border: 1px solid #ccc;
 		font-size: 13px;
-    background: rgba(255, 255, 255, 0.85);
-    transform: translate(-50%, -100%);
+    background: white;
+    transform: translate(-10%, 10%);
     padding: 5px;
     z-index: 15;
+    font-family: var(--font-mono);
   }
+
 </style>
 
 {#if evt.detail}
