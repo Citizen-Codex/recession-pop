@@ -6,18 +6,11 @@
 
   import AxisX from '$lib/components/charts/AxisX.svelte';
   import AxisY from '$lib/components/charts/AxisY.svelte';
-  import Tooltip from '$lib/components/charts/Tooltip.svelte';
 
   let data = [];
   let xDomain = [];
   const xKey = 'year';
   const yKey = 'index'; // Each song is stacked by index
-
-  // Tooltip State
-  let tooltipX = 0;
-  let tooltipY = 0;
-  let tooltipContent = "";
-  let tooltipVisible = false;
 
   // Load Data
   onMount(async () => {
@@ -57,40 +50,24 @@
       // Extract unique years
       xDomain = [...new Set(data.map(d => d[xKey]))].sort((a, b) => a - b);
 
-      console.log('Processed Data:', data);
-      console.log('xDomain:', xDomain);
     } catch (error) {
       console.error('Error loading data:', error);
     }
   });
 
-  // Tooltip Handlers
-  function showTooltip(event, song, artist) {
-    tooltipX = event.pageX;
-    tooltipY = event.pageY - 10;
-    tooltipContent = `${song} - ${artist}`;
-    tooltipVisible = true;
-  }
-
-  function hideTooltip() {
-    tooltipVisible = false;
-  }
 </script>
-
-<!-- Tooltip Component -->
-  <Tooltip x={tooltipX} y={tooltipY} visible={tooltipVisible} content={tooltipContent} />
 
 <div class="chart-container">
   <LayerCake
     ssr
     percentRange
     position="absolute"
-    padding={{ top: 20, right: 20, bottom: 40, left: 40 }}
+    padding={{ top: 0, right: 0, bottom: 0, left: 0 }}
     x={xKey}
     y={yKey}
-    xScale={scaleBand().range([0, 100]).paddingInner(0.5).paddingOuter(0)}
+    xScale={scaleBand().range([0, 100]).paddingInner(0.1).paddingOuter(0)}
     {xDomain}
-    yDomain={[0, d3.max(data, d => d.index)]}  
+    yDomain={[0, d3.max(data, d => d.index)]}
     {data}
     let:xScale
     let:yScale
@@ -116,14 +93,12 @@
                 class="cell"
                 x={xScale(year)}
                 y={yScale(song.index)}
-                width={xScale.bandwidth ? xScale.bandwidth() * 2 : 30} 
-                height={(yScale(0) - yScale(1)) - 0.5}
+                width={xScale.bandwidth ? xScale.bandwidth() * 1 : 30} 
+                height={(yScale(0) - yScale(1)) - 0.7}
                 fill="url(#barGradient)"
                 opacity="1"
-                rx="0.1"
-                ry="0.1"
-                on:mouseover={(e) => showTooltip(e, song.song, song.artist)}
-                on:mouseleave={hideTooltip}
+                rx="0.2"
+                ry="0.2"
               />
               {/each}
             </g>
@@ -149,6 +124,6 @@
   .cell {
     stroke: black;
     stroke-width: 0.25px;
-    pointer-events: all; /* Ensure SVG rects receive mouse events */
+    pointer-events: all; 
   }
 </style>

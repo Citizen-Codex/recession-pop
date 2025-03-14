@@ -14,7 +14,9 @@
 		<Background />
 	</div>
 	
-	<Wordmark />	
+	<div class="mb-20">
+		<Wordmark />
+	</div>	
 
 	<div class="relative flex flex-col items-center gap-12">
 
@@ -34,7 +36,7 @@
 		</p>
 
 		<!-- Audio button -->
-		<div class="mt-10">
+		<div class="">
 			<Audio />
 		</div>
 

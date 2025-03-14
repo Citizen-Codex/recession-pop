@@ -8,19 +8,19 @@
 	$inspect(data);
 </script>
 
-<section class="bg-black">
+<section class="bg-black pointer-events-auto">
 	
 	<div class = "">
 		<Hero />
 	</div>
 
-	<div class="max-w-3xl flex items-center justify-center min-h-screen mx-auto">
+	<div class="max-w-4xl flex items-center justify-center min-h-screen mx-auto ">
 		<Songs />
 	</div>
 	
-	<div class="max-w-3xl flex items-center justify-center min-h-screen mx-auto">
+	<!-- <div class="max-w-3xl flex items-center justify-center min-h-screen mx-auto overflow-x-visible">
 		<SongsCopy />
 		<p class="text-white">this is backup</p>
-	</div>
+	</div> -->
   
 </section>

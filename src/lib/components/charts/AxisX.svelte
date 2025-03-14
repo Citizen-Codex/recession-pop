@@ -60,7 +60,7 @@
 
 <div class="axis x-axis" class:snapLabels>
   {#each tickVals as tick, i (tick)}
-    {@const tickValUnits = $xScale(tick)}
+  {@const tickValUnits = $xScale(tick) + halfBand}
 
     {#if baseline === true}
       <div class="baseline" style="top:100%; width:100%;"></div>
@@ -115,10 +115,10 @@
   }
 
   .tick-mark {
-    border-left: 1px solid #aaa;
+    border-left: 1px solid var(--color-white);
   }
   .baseline {
-    border-top: 1px solid #aaa;
+    border-top: 1px solid white;
   }
 
   .tick .text {

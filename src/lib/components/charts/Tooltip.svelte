@@ -1,36 +1,36 @@
-<script>
-    export let x = 0;
-    export let y = 0;
-    export let visible = false;
-    export let content = "";
-  </script>
-  
-  <style>
-    .tooltip {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.85);
-      color: white;
-      padding: 6px 10px;
-      font-size: 14px;
-      border-radius: 4px;
-      pointer-events: none;
-      transform: translate(-50%, -100%);
-      white-space: nowrap;
-      transition: opacity 0.2s ease-in-out;
-      z-index: 9999;
-    }
-  
-    .hidden {
-      display: none; /* Completely remove from DOM when not visible */
-    }
-  </style>
-  
-  {#if visible}
-    <div
-      class="tooltip"
-      style="left: {x}px; top: {y}px;"
-    >
-      {content}
-    </div>
-  {/if}
-  
+<!--
+	@component
+	Generates a hover tooltip. It creates a slot with an exposed variable via `let:detail` that contains information about the event. Use the slot to populate the body of the tooltip using the exposed variable `detail`.
+ -->
+ <script>
+	/** @type {Object} evt – A svelte event created via [`dispatch`](https://svelte.dev/docs#createEventDispatcher) with event information under `evt.detail.e`. */
+  export let evt = {};
+
+	/** @type {Number} [offset=-35] – A y-offset from the hover point, in pixels. */
+  export let offset = -35;
+</script>
+
+<style>
+  .tooltip {
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+		font-size: 13px;
+    background: rgba(255, 255, 255, 0.85);
+    transform: translate(-50%, -100%);
+    padding: 5px;
+    z-index: 15;
+  }
+</style>
+
+{#if evt.detail}
+  <div
+    class="tooltip"
+    style="
+      top:{evt.detail.e.layerY + offset}px;
+      left:{evt.detail.e.layerX}px;
+    "
+  >
+    <slot detail={evt.detail}></slot>
+  </div>
+{/if}
