@@ -40,13 +40,15 @@
       // Convert grouped data to array format and generate a unique id
       data = [];
       groupedData.forEach((songs, year) => {
+        songs.sort((a, b) => b.rank - a.rank)
         songs.forEach((song, index) => {
           data.push({
             year,
             index: index + 1, // Stacking index
             id: `${year}-${index}`, // Unique id generated from year and index
-            song: song.song,       // Song name
-            artist: song.artist,   // Artist name
+            song: song.song,       
+            artist: song.artist, 
+            rank: song.rank,
           });
         });
       });
@@ -128,6 +130,8 @@
     <Html pointerEvents={false}>
       {#if !hideTooltip && hoveredSong && evt.detail}
         <Tooltip {evt} >
+          <div><strong>{hoveredSong.year}</strong></div>
+          <div><strong>Rank:</strong> #{hoveredSong.rank}</div>
           <div><strong>Song:</strong> {hoveredSong.song}</div>
           <div><strong>Artist:</strong> {hoveredSong.artist}</div>
         </Tooltip>

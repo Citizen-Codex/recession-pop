@@ -7,18 +7,18 @@
   export let evt = {};
 
 	/** @type {Number} [offset=-35] – A y-offset from the hover point, in pixels. */
-  export let offset = -10;
+  export let offset = -35;
 </script>
 
 <style>
   .tooltip {
     position: absolute;
-    width: 150px;
+    width: 200px;
     border: 1px solid #ccc;
-		font-size: 13px;
+		font-size: 12px;
     background: white;
-    transform: translate(-10%, 10%);
-    padding: 5px;
+    transform: translate(-10%, -80%);
+    padding: 8px;
     z-index: 15;
     font-family: var(--font-mono);
   }

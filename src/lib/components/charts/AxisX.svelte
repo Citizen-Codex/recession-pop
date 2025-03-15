@@ -72,14 +72,14 @@
     {#if tickMarks === true}
       <div
         class="tick-mark"
-        style:left="{tickValUnits + halfBand}{units}"
+        style:left="{tickValUnits}{units}"
         style:height="{tickLen}px"
         style:bottom="{-tickLen - tickGutter}px"
       ></div>
     {/if}
     <div
       class="tick tick-{i}"
-      style:left="{tickValUnits + halfBand}{units}"
+      style:left="{tickValUnits}{units}"
       style="top:calc(100% + {tickGutter}px);"
     >
       <div
