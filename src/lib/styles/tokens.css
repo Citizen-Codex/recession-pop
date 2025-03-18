@@ -1,6 +1,7 @@
 @theme {
   --font-serif: 'Junicode', 'serif';
-  --font-mono: 'RobotoMono', 'monospace';
+  --font-mono: 'Roboto Mono', 'monospace';
+  --font-sans: 'Work Sans', 'sans serif';
 
   --color-black-offset: #292929;
   --color-white-offset: #FFF9F2;
@@ -12,35 +13,28 @@
   --color-gray: #7F7F7F;
 }
 
-
-@utility heading {
-  @apply font-serif text-5xl font-semibold text-black leading-none;
-}
-
-@utility subheading {
-  @apply font-serif text-2xl font-semibold text-black-offset leading-7;
-}
+/* Hero */
 
 @utility credits {
-  @apply font-mono tracking-wide font-medium text-white leading-7 uppercase;
+  @apply font-mono tracking-wide font-medium text-white decoration-white leading-7 uppercase;
+}
+
+/* Content structure */
+
+@utility column {
+  @apply max-w-[600px] mx-auto flex flex-col items-center;
+}
+
+/* Body */
+
+@utility heading {
+  @apply font-mono text-4xl uppercase font-semibold;
 }
 
 @utility body {
-  @apply font-serif text-lg text-black;
+  @apply font-sans text-xl/relaxed py-12;
 }
 
-@utility cta {
-  @apply font-mono font-medium text-xl leading-none uppercase;
-}
-
-@utility content-well-small {
-  @apply max-w-md w-full mx-auto px-4;
-}
-
-@utility content-well-medium {
-  @apply w-full max-w-3xl px-4 md:px-8;
-}
-
-@utility content-well-large {
-  @apply w-full px-4 md:px-8;
+@utility p {
+  @apply mb-5;
 }

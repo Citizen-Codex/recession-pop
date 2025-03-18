@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source("../../");
 @import './fonts.css';
 @import './tokens.css';
 
@@ -11,5 +11,13 @@
     display: inline-block;
     width: 1em;
     height: 1em;
+  }
+
+  .markdown {
+    @apply flex flex-col gap-4 md:gap-6;
+
+    a {
+      @apply font-medium underline;
+    }
   }
 }

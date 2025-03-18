@@ -108,7 +108,6 @@
               ry="0.2"
               on:mouseenter={(event) => {
                 hoveredSong = song;
-                // Wrap the event as expected by Tooltip.svelte
                 evt = { detail: { e: event } };
                 hideTooltip = false;
               }}
@@ -143,6 +142,7 @@
 <style>
   .chart-container {
     width: 100%;
+    max-width: var(--container-4xl);
     height: 350px;
     position: relative;
     pointer-events: all !important;
