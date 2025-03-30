@@ -1,6 +1,9 @@
-<section class="h-full w-full absolute top-0 left-0 overflow-hidden bg-black"></section>
-
-
+<section class="absolute top-0 left-0 h-full w-full overflow-hidden">
+    <video autoplay loop muted class="h-full w-full object-cover">
+        <source src="assets/lights_slow.mp4" type="video/mp4">
+    </video>
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
+</section>
 
 <!-- <div class="h-full w-full absolute top-0 left-0 overflow-hidden">
     <img 
@@ -9,8 +12,6 @@
         class="object-cover w-full h-full rotating-image" 
     />
 </div> -->
-
-
 
 <!-- <body>
 

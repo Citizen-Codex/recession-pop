@@ -1,20 +1,32 @@
 <script>
-    import { page } from '$app/state';
-    import md from '$lib/utils/md';
+	import { page } from '$app/state';
+	import md from '$lib/utils/md';
 
-    const content = page.data['economy'];
+	const content = page.data['economy'];
 </script>
 
-<section class="py-24 text-white">
+<section class="sections column w-full bg-black text-white">
 
-    <p class="heading">
-        {@html md(content.hed)}
-    </p>
+	<div class="relative">
 
-    
-    <p class="body">
-        {@html md(content.content)}
-    </p>
+		<p class="heading text-left">
+			{@html md(content.hed)}
+		</p>
 
+		<p class="body">
+			{@html md(content.content)}
+		</p>
+
+		<img src="assets/icons/green_note.svg"
+		alt="green note icon"
+		class="absolute top-[-80px] left-[-80px]"
+		/>
+
+		<img src="assets/icons/money.svg"
+		alt="green note icon"
+		class="absolute top-[60px] right-[-120px]"
+		/>
+
+	</div>
 
 </section>

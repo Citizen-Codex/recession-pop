@@ -1,7 +1,7 @@
 @theme {
-  --font-serif: 'Junicode', 'serif';
   --font-mono: 'Roboto Mono', 'monospace';
   --font-sans: 'Work Sans', 'sans serif';
+  --font-robo: 'Orbitron', 'monospace';
 
   --color-black-offset: #292929;
   --color-white-offset: #FFF9F2;
@@ -22,7 +22,7 @@
 /* Content structure */
 
 @utility column {
-  @apply max-w-[600px] mx-auto flex flex-col items-center;
+  @apply max-w-[600px] mx-auto flex flex-col;
 }
 
 /* Body */
@@ -35,6 +35,6 @@
   @apply font-sans text-xl/relaxed py-12;
 }
 
-@utility p {
-  @apply mb-5;
+@utility sections {
+  @apply py-24;
 }

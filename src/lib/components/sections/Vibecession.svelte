@@ -1,33 +1,42 @@
 <script>
-    import Window from '$lib/components/helpers/Window.svelte';
-    import { page } from '$app/state';
-    import md from '$lib/utils/md';
-  
-    const content = page.data['vibe'];
-  </script>
-  
-  <section class="py-24 text-white">
+	import Window from '$lib/components/helpers/Window.svelte';
+	import Quote from '$lib/components/helpers/Quote.svelte';
+	import { page } from '$app/state';
+	import md from '$lib/utils/md';
 
-    <Window>
-        <div class="mx-36">
+	const content = page.data['vibe'];
+</script>
 
-            <img src="assets/icons/bulb.svg" 
-                alt="bulb icon" 
-                class="justify-center mx-auto mb-10"
-            />
+<section class="sections text-white max-w-5xl mx-auto">
 
-            <p class="heading text-center">
-                {@html md(content.hed)}
-            </p>
-            <p class="body text-center">
-                {@html md(content.dek)}
-            </p>
-            <p class="body max-w-2xl justify-center mx-auto">
-                {@html md(content.content)}
-            </p>
+	<Window>
 
-        </div>
-    </Window>
+		<div class="mx-28">
 
-  </section>
-  
+			<div class="flex items-start gap-12">
+				<img src="assets/icons/bulb.svg" alt="bulb icon" />
+				<p class="heading text-left">
+					{@html md(content.hed)}
+				</p>
+			</div>
+			
+			<p class="body text-left">
+				{@html md(content['content-before'])}
+			</p>
+
+			<Quote 
+			quote={md(content['quote'])}
+			color="#44FF8F" />
+
+
+
+			<p class="body text-left">
+				{@html md(content['content-after'])}
+			</p>
+
+		</div>
+
+	</Window>
+
+</section>
+

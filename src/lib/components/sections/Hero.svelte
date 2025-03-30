@@ -7,30 +7,46 @@
 	import md from '$lib/utils/md';
 </script>
 
-
-<section class="bg-black relative flex h-screen w-full flex-col items-center justify-center text-center">
-
+<section
+	class="relative flex h-screen w-full flex-col items-center justify-center text-center"
+>
 	<div class="absolute inset-0 -z-10">
 		<Background />
 	</div>
-	
+
 	<div class="mb-20">
 		<Wordmark />
-	</div>	
+	</div>
 
 	<div class="relative flex flex-col items-center gap-12">
-
 		<!-- Title -->
-		<div class="max-w-4xl">
+		<div class="max-w-6xl">
 			<img src="/assets/header.png" alt="Header" />
 		</div>
 
-		<!-- Subheading -->
-		<div class="-mt-20 uppercase max-w-lg">
-			<Window>
+		<div class="relative">
+			<!-- Subheading  -->
+			<div class="-mt-20 max-w-lg uppercase text-xl">
+			  <Window>
 				{@html md(page.data.dek)}
-			</Window>
-		</div>
+			  </Window>
+			</div>
+		  
+			<!-- Notes icon -->
+			<img 
+			  src="assets/icons/notes.svg" 
+			  alt="notes icon" 
+			  class="absolute left-[-100px] top-0"
+			/>
+
+			<!-- Cursor icon -->
+			<img 
+			  src="assets/icons/cursor.svg" 
+			  alt="notes icon" 
+			  class="absolute right-[-30px] top-40"
+			/>
+		  </div>
+		  
 
 		<!-- Credits -->
 		<p class="credits">
@@ -41,6 +57,5 @@
 		<div class="">
 			<AudioButton />
 		</div>
-
 	</div>
 </section>
