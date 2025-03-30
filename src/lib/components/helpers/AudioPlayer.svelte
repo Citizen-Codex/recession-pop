@@ -145,11 +145,11 @@
 	}
 
 	.play {
-		background-image: url('assets/icons/play.svg');
+		background-image: url('/assets/icons/play.svg');
 	}
 
 	.pause {
-		background-image: url('assets/icons/pause.svg') !important;
+		background-image: url('/assets/icons/pause.svg') !important;
 	}
 
 	.title {
