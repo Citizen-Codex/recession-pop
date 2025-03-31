@@ -2,7 +2,7 @@
     <video autoplay loop muted class="h-full w-full object-cover">
         <source src="assets/lights_slow.mp4" type="video/mp4">
     </video>
-    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-75"></div>
 </section>
 
 <!-- <div class="h-full w-full absolute top-0 left-0 overflow-hidden">

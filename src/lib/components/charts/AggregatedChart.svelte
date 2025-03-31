@@ -35,12 +35,13 @@
         y={yScale(d.count)}
         width={xScale.bandwidth()}
         height={chartHeight - yScale(d.count)}
-        fill="#D9D9D9"
+        fill="gray"
         stroke="black"
       />
     {/if}
   {/each}
 
+  <!-- Recession highlights -->
   {#if scrollIndex === 6}
   {#key scrollIndex}
     {#each recessionPeriods as period}

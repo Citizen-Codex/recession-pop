@@ -54,7 +54,7 @@
 		<MusicPlayer />
 	</div>
 
-	<div class="min-h-screen bg-white w-full">
+	<div class="min-h-screen bg-black w-full">
 	</div>
 	
 </main>

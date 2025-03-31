@@ -1,6 +1,6 @@
 <!-- 
 animation from https://scroll-driven-animations.style/demos/cover-flow/css/
-polyfill from https://github.com/flackr/scroll-timeline
+polyfill from https∑://github.com/flackr/scroll-timeline
 -->
 
 <script>
