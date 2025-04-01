@@ -20,7 +20,7 @@
 
 	<div class="relative flex flex-col items-center gap-12">
 		<!-- Title -->
-		<div class="max-w-6xl">
+		<div class="max-w-4xl">
 			<img src="/assets/header.png" alt="Header" />
 		</div>
 

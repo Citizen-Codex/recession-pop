@@ -7,6 +7,7 @@
 	import Vibecession from '$lib/components/sections/Vibecession.svelte';
 	import ChartScrolly from '$lib/components/sections/ChartScrolly.svelte';
 	import MusicPlayer from '$lib/components/sections/MusicPlayer.svelte';
+	import Ending from '$lib/components/sections/Ending.svelte';
 
 
 	const { data } = $props();
@@ -54,7 +55,10 @@
 		<MusicPlayer />
 	</div>
 
-	<div class="min-h-screen bg-black w-full">
+	<div class="min-h-screen w-full bg-black">
+		<div class="column max-w-7xl">
+			<Ending />
+		</div>
 	</div>
 	
 </main>
