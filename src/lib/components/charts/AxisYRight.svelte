@@ -1,7 +1,15 @@
 <script>
 	import { getContext } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	const { xRange, percentRange } = getContext('LayerCake');
+
+	/** Moves axis title !IMPORTANT 
+	 * remove this in the axisTitle section if not wanted */
+	export let titleDisplace = 55;
+
+	/** @type {String} [axisTitle=''] */
+	export let axisTitle = '';
 
 	/** @type {any} scale - The yScale to use for this axis */
 	export let scale;
@@ -86,12 +94,22 @@
 </script>
 
 <div class="axis y-axis right">
+	{#if axisTitle}
+		<div
+			class="axis-title"
+			style="right: calc({$xRange[0]}{units} - {titleDisplace}px);"
+		>
+			{axisTitle}
+		</div>
+	{/if}
+
 	{#each tickVals as tick, i (tick)}
 		{@const tickValUnits = scale(tick)}
 
 		<div
 			class="tick tick-{i}"
-			style="right:{$xRange[1]}{units};top:{tickValUnits + halfBand}{units};"
+			style="right:0;top:{tickValUnits + halfBand}{units};"
+			transition:fly={{ y: 20, duration: 400, delay: i * 30 }}
 		>
 			{#if gridlines === true}
 				<div class="gridline" style="top:0;" style:right="{x1}px" style:left="0px"></div>
@@ -132,6 +150,14 @@
 		width: 100%;
 		height: 100%;
 	}
+	.axis-title {
+		position: absolute;
+		top: 0;
+		transform: translateY(-3em);
+		font-size: 18px; 
+		color: white;
+		font-family: var(--font-mono);
+	}
 	.tick {
 		font-size: 16px;
 		width: 100%;
@@ -149,4 +175,5 @@
 	.tick .text {
 		color: white;
 	}
+
 </style>

@@ -8,6 +8,9 @@
 	import { getContext } from 'svelte';
   
 	const { xRange, yScale, percentRange } = getContext('LayerCake');
+
+	/** @type {String} [axisTitle=''] */
+	export let axisTitle = '';
   
 	/** @type {boolean} [tickMarks=false] - Show marks next to the tick label. */
 	export let tickMarks = false;
@@ -82,6 +85,15 @@
   </script>
   
   <div class="axis y-axis">
+	{#if axisTitle}
+		<div
+			class="axis-title"
+			style="left: calc({$xRange[0]}{units} - 28px);"
+		>
+			{axisTitle}
+		</div>
+	{/if}
+
 	{#each tickVals as tick, i (tick)}
 	  {@const tickValUnits = $yScale(tick)}
   
@@ -125,6 +137,14 @@
 	.axis {
 	  width: 100%;
 	  height: 100%;
+	}
+	.axis-title {
+		position: absolute;
+		top: 0;
+		transform: translateY(-3em);
+		font-size: 18px; 
+		color: white;
+		font-family: var(--font-mono);
 	}
 	.tick {
 		font-size: 16px;

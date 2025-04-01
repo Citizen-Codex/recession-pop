@@ -1,4 +1,8 @@
 <script>
+  import { onMount } from "svelte";
+  import { draw, fade } from 'svelte/transition';
+  import { line, curveMonotoneX } from 'd3-shape';
+
   export let xDomain;
   export let data;
   export let xScale;
@@ -12,6 +16,8 @@
 
   export let gdpData;
   export let gdpYScale;
+  export let unemData;
+  export let unemYScale;
 
   // recession highlights
 
@@ -25,6 +31,9 @@
     { start: 2020, end: 2020 },
   ];
 
+  const recessionYears = new Set([1970, 1973, 1974, 1975, 1980, 1981, 1982, 1990, 1991, 2001, 2008, 2009, 2020]);
+  const vibeYears = new Set([1971, 1972, 1976, 1977, 1983, 1984, 2002, 2003, 2010, 2011, 2012, 2021, 2022]);
+  
   let chartHeight = 0;
   if (yScale && yScale.range) {
     const range = yScale.range();
@@ -41,16 +50,23 @@
   });
 
   // generate path for GDP line
-  $: gdpLinePath = gdpData
-    ? "M" + gdpData
-        .map((d, i) => `${xScale(d.year) + (xScale.bandwidth ? xScale.bandwidth() / 2 : 0)},${gdpYScale(d.gdp)}`)
-        .join(" L")
-    : "";
+  const gdpLineGenerator = line()
+    .x((d) => xScale(d.year) + (xScale.bandwidth ? xScale.bandwidth() / 2 : 0))
+    .y((d) => gdpYScale(d.gdp));
+
+  $: gdpLinePath = gdpData ? gdpLineGenerator(gdpData) : "";
+
+  // generate path for unemployment line
+  const unemLineGenerator = line()
+    .x((d) => xScale(d.year) + (xScale.bandwidth ? xScale.bandwidth() / 2 : 0))
+    .y((d) => unemYScale(d.unrate));
+
+  $: unemLinePath = unemData ? unemLineGenerator(unemData) : "";
 </script>
 
 <!-- Rainbow bars -->
 {#each xDomain as year (year)}
-  <g class="individual-bars" opacity={scrollIndex >= 6 ? 0 : 1}>
+  <g class="rainbow-bars" opacity={scrollIndex >= 5 ? 0 : 1}>
     {#each data.filter((d) => d.year === year) as song (song.id)}
       <rect
         class="cell"
@@ -77,30 +93,76 @@
 {#each xDomain as year (year)}
   <g class="gray-overlays">
     {#each data.filter((d) => d.year === year) as song (song.id)}
-      <rect
-        class="gray-overlay"
-        x={xScale(year)}
-        y={scrollIndex >= 5
-          ? yScale(aggregatedData.find((d) => d.year === year)?.count || 0)
-          : yScale(song.index)}
-        width={xScale.bandwidth ? xScale.bandwidth() : 30}
-        height={scrollIndex >= 5
-          ? yScale(0) - yScale(aggregatedData.find((d) => d.year === year)?.count || 0)
-          : yScale(0) - yScale(1) - 0.7}
-        fill="gray"
-        rx="0.2"
-        ry="0.2"
-        style="
-          animation-delay: {song.index * 0.2}s;
-          opacity: {scrollIndex >= 2 ? 1 : 0};
-        "
-      />
+    <rect
+    class="gray-overlay"
+    x={xScale(year)}
+    y={(scrollIndex >= 5
+      ? yScale(aggregatedData.find((d) => d.year === year)?.count || 0)
+      : yScale(song.index))}
+    width={xScale.bandwidth ? xScale.bandwidth() : 30}
+    height={(scrollIndex >= 5
+      ? yScale(0) - yScale(aggregatedData.find((d) => d.year === year)?.count || 0)
+      : yScale(0) - yScale(1) - 0.7)}
+    fill="gray"
+    rx="0.2"
+    ry="0.2"
+    style="
+      animation-delay: {song.index * 0.2}s;
+      opacity: {scrollIndex >= 2 ? 1 : 0}; 
+      pointer-events: none;
+    "
+  />
+  
     {/each}
   </g>
 {/each}
 
+<!-- Recession years colored -->
+{#each xDomain as year (year)}
+  {#if recessionYears.has(year)}
+    <g class="recession-years">
+      {#each data.filter((d) => d.year === year) as song (song.id)}
+        <rect
+          class="recession-bar {scrollIndex >= 5 && scrollIndex < 10 ? 'visible' : ''} {scrollIndex === 10 ? 'fade-out' : ''}"
+          x={xScale(year)}
+          y={yScale(aggregatedData.find((d) => d.year === year)?.count || song.index)}
+          width={xScale.bandwidth ? xScale.bandwidth() : 30}
+          height={yScale(0) - yScale(aggregatedData.find((d) => d.year === year)?.count || 0) - 0.7}
+          fill="#23E8F2"
+          rx="0.2"
+          ry="0.2"
+        />
+      {/each}
+    </g>
+  {/if}
+{/each}
+
+<!-- Vibecession years colored -->
+{#each xDomain as year (year)}
+  {#if vibeYears.has(year)}
+  <g class="vibe-years">
+    {#each data.filter((d) => d.year === year) as song (song.id)}
+      <rect
+        class="vibe-bar
+          {scrollIndex >= 9 ? 'visible' : ''}
+          {scrollIndex < 9 ? 'fade-out' : ''}
+        "
+        x={xScale(year)}
+        y={yScale(aggregatedData.find((d) => d.year === year)?.count || song.index)}
+        width={xScale.bandwidth ? xScale.bandwidth() : 30}
+        height={yScale(0) - yScale(aggregatedData.find((d) => d.year === year)?.count || 0) - 0.7}
+        fill="#FE88F9"
+        rx="0.2"
+        ry="0.2"
+      />
+    {/each}
+  </g>
+{/if}
+
+{/each}
+
 <!-- Recession highlights -->
-<g class="recession-highlights" class:active={scrollIndex >= 5 && scrollIndex <= 8}>
+<g class="recession-highlights {scrollIndex === 10 ? 'fade-out' : ''}" class:active={scrollIndex >= 5 && scrollIndex <= 9}>
   {#each recessionPeriods as period, i (period.start)}
     <rect
       class="recession-rect"
@@ -109,7 +171,7 @@
       width={xScale(period.end + 1) - xScale(period.start)}
       height={chartHeight}
       fill="#36E4EC"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
       stroke="#36E4EC"
       stroke-opacity="1"
       stroke-width="0.5"
@@ -119,17 +181,24 @@
 </g>
 
 <!-- GDP line -->
-{#if scrollIndex >= 6 && gdpData}
+{#if scrollIndex === 6 && gdpData}
   <path
     d={gdpLinePath}
     fill="none"
     stroke="#A6F9FF"
-    stroke-width="2"
-    stroke-linejoin="round"
-    stroke-linecap="round"
+    stroke-width="5" 
   />
 {/if}
 
+<!-- Unemployment line -->
+{#if scrollIndex === 7 && unemData}
+  <path
+    d={unemLinePath}
+    fill="none"
+    stroke="#F9A6FF"
+    stroke-width="5"
+  />
+{/if}
 
 <style>
   .cell {
@@ -153,21 +222,50 @@
       y 1s ease-in-out;
   }
 
-  .individual-bars {
+
+  .rainbow-bars {
     transition: opacity 0.6s ease-in-out;
+    opacity: 1;
   }
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  .recession-bar {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
+
+  .recession-bar.visible {
+    opacity: 1;
+    transition-delay: 1.8s;
+  }
+
+  .recession-bar.fade-out {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+
+  .vibe-bar {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .vibe-bar.visible {
+    opacity: 1;
+  }
+
+  .vibe-bar.fade-out {
+    opacity: 0;
+  }
+
 
   .recession-highlights {
     pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+
+  .recession-highlights.fade-out {
+    opacity: 0;
   }
 
   .recession-rect {
@@ -184,7 +282,6 @@
     animation: draw-left-right-reverse 0.5s backwards ease-in;
   }
 
-  /* Staggered delays */
   .recession-rect:nth-child(1) { animation-delay: 0s; }
   .recession-rect:nth-child(2) { animation-delay: 0.2s; }
   .recession-rect:nth-child(3) { animation-delay: 0.4s; }
@@ -215,4 +312,13 @@
     }
   }
 
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
 </style>

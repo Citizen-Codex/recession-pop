@@ -3,6 +3,7 @@
 	import { LayerCake, ScaledSvg, Html } from 'layercake';
 	import { scaleBand, scaleLinear } from 'd3-scale';
 	import * as d3 from 'd3';
+	import { format as d3format } from 'd3-format';
 
 	import AxisX from '$lib/components/charts/AxisX.svelte';
 	import AxisY from '$lib/components/charts/AxisY.svelte';
@@ -18,18 +19,23 @@
 
 	let data = [];
 	let gdpData = [];
+	let unemData = [];
 	let gdpYScale;
+	let unemYScale;
 	let yScale;
 	let xDomain = [];
 
 	const xKey = 'year';
 	const yKey = 'index';
 	const gdpByYear = {};
+	const unemByYear = {};
+	
 
 	onMount(async () => {
 		try {
 			const vibeData = await d3.csv('/data/billboard.csv');
 			const rawGdp = await d3.csv('/data/gdp.csv');
+			const rawUnem = await d3.csv('/data/unemployment.csv');
 
 			// Filter music data
 			const filteredData = vibeData.filter(
@@ -59,7 +65,7 @@
 				});
 			});
 
-			// GDP data averaged out over 4 quarters per year
+			// GDP year average
 			rawGdp.forEach(d => {
 				const year = parseInt(d.observation_date.slice(0, 4));
 				if (year >= 1970) {
@@ -71,16 +77,36 @@
 			});
 
 			gdpData = Object.entries(gdpByYear).map(([year, values]) => ({
-				year: +year,
-				gdp: values.reduce((sum, val) => sum + val, 0) / values.length
-			}));
-
-			console.log('GDP Data', gdpData)
+				year: +year,  // convert string key to number
+				gdp: values.reduce((sum, val) => sum + val, 0) / values.length  // average
+				}));
 
 			// GDP Y scale
 			gdpYScale = scaleLinear()
 				.domain([0, 25000])
 				.range([100, 0]); 
+
+			// Unemployment year average
+			rawUnem.forEach(d => {
+				const year = parseInt(d.observation_date.slice(0, 4));
+				if (year >= 1970 && year <= 2024) {
+					if (!unemByYear[year]) {
+						unemByYear[year] = [];
+					}
+					unemByYear[year].push(Number(d.UNRATE));
+				}
+			});
+
+			unemData = Object.entries(unemByYear).map(([year, values]) => ({
+				year: +year,
+				unrate: values.reduce((sum, val) => sum + val, 0) / values.length
+			}));
+
+			// GDP Y scale
+			unemYScale = scaleLinear()
+				.domain([0, 10])
+				.range([100, 0]); 
+
 			
 			// Set xDomain
 			xDomain = [...new Set(data.map((d) => d[xKey]))].sort((a, b) => a - b);
@@ -110,7 +136,7 @@
 		evt = {};
 	}
 
-	
+
 </script>
 
 <div class="chart-container">
@@ -133,26 +159,47 @@
 	>
 
 		<!-- Axes -->
-		<Html class="pointer-events-none">
+		<Html class="pointer-events-none mx-auto">
 			<AxisX 
 				gridlines={false} 
 				tickMarks={true} 
 				baseline={true} />
 			
-			<!-- Left Y axis for song rank or count -->
+			<!-- Left Y axis for song  -->
 			<AxisY 
 				scale={yScale}
 				gridlines={true}
 				snapBaselineLabel={true}
+				axisTitle="No. of songs on the Billboard charts"
 				/>
 
 			<!-- Right Y axis for GDP -->
 			{#if gdpYScale}
-				<AxisYRight 
-					scale={gdpYScale}
-					gridlines={true}
-					snapBaselineLabel={true}
-				/>
+				<div
+					style="transition: opacity 500ms;"
+					style:opacity={scrollIndex === 6 ? 1 : 0}
+				>
+					<AxisYRight 
+						scale={gdpYScale}
+						format={d => `$${d3format('~s')(d)}`}
+						axisTitle="Real GDP ($ billions)"
+						titleDisplace=55
+					/>
+				</div>
+			{/if}
+
+			<!-- Right Y axis for unemployment -->
+			{#if unemYScale}
+				<div
+					style="transition: opacity 500ms;"
+					style:opacity={scrollIndex === 7 ? 1 : 0}
+				>
+					<AxisYRight 
+						scale={unemYScale}
+						axisTitle="Unemployment rate"
+						titleDisplace=35
+					/>
+				</div>
 			{/if}
 
 
@@ -186,6 +233,8 @@
 				{yScale}
 				{gdpData}
 				{gdpYScale}
+				{unemData}
+				{unemYScale}
 				onMouseEnter={handleMouseEnter}
 				onMouseMove={handleMouseMove}
 				onMouseLeave={handleMouseLeave}
