@@ -9,6 +9,30 @@
 	export let color1 = ''; // Base background color
 	export let color2 = ''; // Duration progress color
 
+	const startSeconds = parseTimeString(start);
+	const stopSeconds = parseTimeString(stop);
+	const segmentDuration = stopSeconds - startSeconds;
+
+	function playPause() {
+		if (track.paused) {
+			if (!window) return;
+			// Dispatch a global event notifying that this player is starting
+			window.dispatchEvent(new CustomEvent('audio-player-play', { detail: uid }));
+			if (track.currentTime < startSeconds || track.currentTime >= stopSeconds) {
+				track.currentTime = startSeconds;
+			}
+			track
+				.play()
+				.then(() => {
+					isPlaying = true;
+				})
+				.catch((err) => console.error('Play error:', err));
+		} else {
+			track.pause();
+			isPlaying = false;
+		}
+	}
+
 	// Generate a unique id for this component instance.
 	let uid = Math.random().toString(36).substring(2, 15);
 
@@ -21,29 +45,6 @@
 	}
 
 	onMount(() => {
-		const startSeconds = parseTimeString(start);
-		const stopSeconds = parseTimeString(stop);
-		const segmentDuration = stopSeconds - startSeconds;
-
-		function playPause() {
-			if (track.paused) {
-				// Dispatch a global event notifying that this player is starting
-				window.dispatchEvent(new CustomEvent('audio-player-play', { detail: uid }));
-				if (track.currentTime < startSeconds || track.currentTime >= stopSeconds) {
-					track.currentTime = startSeconds;
-				}
-				track
-					.play()
-					.then(() => {
-						isPlaying = true;
-					})
-					.catch((err) => console.error('Play error:', err));
-			} else {
-				track.pause();
-				isPlaying = false;
-			}
-		}
-
 		container.addEventListener('click', playPause);
 
 		track.addEventListener('ended', () => {
