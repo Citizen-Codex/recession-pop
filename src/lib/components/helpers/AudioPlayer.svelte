@@ -9,15 +9,26 @@
 	export let color1 = ''; // Base background color
 	export let color2 = ''; // Duration progress color
 
-	const startSeconds = parseTimeString(start);
-	const stopSeconds = parseTimeString(stop);
-	const segmentDuration = stopSeconds - startSeconds;
+	let startSeconds = 0;
+	let stopSeconds = 0;
+	let segmentDuration = 0;
+
+	// Generate a unique id for this component instance.
+	let uid = Math.random().toString(36).substring(2, 15);
+
+	function parseTimeString(timeStr) {
+		const parts = timeStr.split(':');
+		if (parts.length === 2) {
+			return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+		}
+		return 0;
+	}
 
 	function playPause() {
+		if (!track) return;
+
 		if (track.paused) {
-			if (!window) return;
-			// Dispatch a global event notifying that this player is starting
-			window.dispatchEvent(new CustomEvent('audio-player-play', { detail: uid }));
+			window?.dispatchEvent(new CustomEvent('audio-player-play', { detail: uid }));
 			if (track.currentTime < startSeconds || track.currentTime >= stopSeconds) {
 				track.currentTime = startSeconds;
 			}
@@ -33,19 +44,10 @@
 		}
 	}
 
-	// Generate a unique id for this component instance.
-	let uid = Math.random().toString(36).substring(2, 15);
-
-	function parseTimeString(timeStr) {
-		const parts = timeStr.split(':');
-		if (parts.length === 2) {
-			return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
-		}
-		return 0;
-	}
-
 	onMount(() => {
-		container.addEventListener('click', playPause);
+		startSeconds = parseTimeString(start);
+		stopSeconds = parseTimeString(stop);
+		segmentDuration = stopSeconds - startSeconds;
 
 		track.addEventListener('ended', () => {
 			isPlaying = false;
@@ -61,11 +63,9 @@
 			}
 			const progress = (track.currentTime - startSeconds) / segmentDuration;
 			const progressPercent = progress * 100;
-			// Update the container's background using the exported colors.
 			container.style.background = `linear-gradient(to right, ${color2} ${progressPercent}%, ${color1} ${progressPercent}%)`;
 		});
 
-		// Listen for the global event; if another player starts, pause this one.
 		function handleGlobalPlay(event) {
 			if (event.detail !== uid && isPlaying) {
 				track.pause();
@@ -74,12 +74,12 @@
 		}
 		window.addEventListener('audio-player-play', handleGlobalPlay);
 
-		// Clean up the event listener on component destruction
 		onDestroy(() => {
 			window.removeEventListener('audio-player-play', handleGlobalPlay);
 		});
 	});
 </script>
+
 
 <audio bind:this={track} src={source}>
 	<source src={source} type="audio/mpeg" />
