@@ -56,6 +56,9 @@
 
   $: gdpLinePath = gdpData ? gdpLineGenerator(gdpData) : "";
 
+  console.log(gdpData)
+  $: console.log('gdp line path', gdpLinePath)
+
   // generate path for unemployment line
   const unemLineGenerator = line()
     .x((d) => xScale(d.year) + (xScale.bandwidth ? xScale.bandwidth() / 2 : 0))
@@ -64,30 +67,8 @@
   $: unemLinePath = unemData ? unemLineGenerator(unemData) : "";
 </script>
 
-<!-- Rainbow bars -->
-{#each xDomain as year (year)}
-  <g class="rainbow-bars" opacity={scrollIndex >= 5 ? 0 : 1}>
-    {#each data.filter((d) => d.year === year) as song (song.id)}
-      <rect
-        class="cell"
-        x={xScale(year)}
-        y={yScale(song.index)}
-        width={xScale.bandwidth ? xScale.bandwidth() : 30}
-        height={yScale(0) - yScale(1) - 0.7}
-        fill="url(#barGradient)"
-        opacity="1"
-        rx="0.2"
-        ry="0.2"
-        on:mouseenter={(event) => onMouseEnter(song, event)}
-        on:mousemove={(event) => onMouseMove(event)}
-        on:mouseleave={onMouseLeave}
-        aria-label={`Year: ${song.year}, Rank: ${song.rank}, Song: ${song.song}, Artist: ${song.artist}`}
-        role="img"
-        style="animation-delay: {song.index * 0.2}s;"
-      />
-    {/each}
-  </g>
-{/each}
+<!-- ORDER THIS BASED ON LAYER POSITION (rainbow bars always in front, so render last) -->
+
 
 <!-- Gray bars (detailed then aggregated) -->
 {#each xDomain as year (year)}
@@ -181,12 +162,15 @@
 </g>
 
 <!-- GDP line -->
-{#if scrollIndex === 6 && gdpData}
+{#if scrollIndex === 6}
   <path
     d={gdpLinePath}
     fill="none"
     stroke="#A6F9FF"
     stroke-width="5" 
+    in:draw={{duration: 2000}}
+    pathLength={10}
+    out:fade={{duration: 500}}
   />
 {/if}
 
@@ -197,8 +181,36 @@
     fill="none"
     stroke="#F9A6FF"
     stroke-width="5"
+    in:draw={{duration: 3000}}
+    pathLength={10}
+    out:fade={{duration: 500}}
   />
 {/if}
+
+<!-- Rainbow bars -->
+{#each xDomain as year (year)}
+  <g class="rainbow-bars" style="opacity: {scrollIndex > 2 ? 0 : 1};">
+    {#each data.filter((d) => d.year === year) as song (song.id)}
+      <rect
+        class="cell"
+        x={xScale(year)}
+        y={yScale(song.index)}
+        width={xScale.bandwidth ? xScale.bandwidth() : 30}
+        height={yScale(0) - yScale(1) - 0.7}
+        fill="url(#barGradient)"
+        opacity="1"
+        rx="0.2"
+        ry="0.2"
+        on:mouseenter={(event) => onMouseEnter(song, event)}
+        on:mousemove={(event) => onMouseMove(event)}
+        on:mouseleave={onMouseLeave}
+        aria-label={`Year: ${song.year}, Rank: ${song.rank}, Song: ${song.song}, Artist: ${song.artist}`}
+        role="img"
+        style="animation-delay: {song.index * 0.2}s;"
+      />
+    {/each}
+  </g>
+{/each}
 
 <style>
   .cell {
@@ -247,14 +259,17 @@
   .vibe-bar {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
   }
 
   .vibe-bar.visible {
     opacity: 1;
+    pointer-events: none;
   }
 
   .vibe-bar.fade-out {
     opacity: 0;
+    pointer-events: none;
   }
 
 

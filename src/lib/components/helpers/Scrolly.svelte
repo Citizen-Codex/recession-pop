@@ -16,7 +16,8 @@
 	export let top = 0;
 	export let bottom = 0;
 	export let increments = 100;
-	export let value = undefined;
+	export let value;
+	// delete 'else value = undefined' in mostInView
 
 	const steps = [];
 	const threshold = [];
@@ -43,7 +44,6 @@
 		}
 
 		if (maxRatio > 0) value = maxIndex;
-		else value = undefined;
 	};
 
 	const createObserver = (node, index) => {

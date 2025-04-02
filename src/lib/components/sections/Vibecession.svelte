@@ -7,36 +7,38 @@
 	const content = page.data['vibe'];
 </script>
 
-<section class="sections text-white max-w-5xl mx-auto">
+<div class="column max-w-7xl">
+	<section class="sections text-white max-w-5xl mx-auto">
 
-	<Window>
+		<Window>
 
-		<div class="mx-28">
+			<div class="mx-28">
 
-			<div class="flex items-start gap-12">
-				<img src="assets/icons/bulb.svg" alt="bulb icon" />
-				<p class="heading text-left">
-					{@html md(content.hed)}
+				<div class="flex items-start gap-12">
+					<img src="assets/icons/bulb.svg" alt="bulb icon" />
+					<p class="heading text-left">
+						{@html md(content.hed)}
+					</p>
+				</div>
+				
+				<p class="body text-left">
+					{@html md(content['content-before'])}
 				</p>
+
+				<Quote 
+				quote={md(content['quote'])}
+				color="#44FF8F" />
+
+
+
+				<p class="body text-left">
+					{@html md(content['content-after'])}
+				</p>
+
 			</div>
-			
-			<p class="body text-left">
-				{@html md(content['content-before'])}
-			</p>
 
-			<Quote 
-			quote={md(content['quote'])}
-			color="#44FF8F" />
+		</Window>
 
-
-
-			<p class="body text-left">
-				{@html md(content['content-after'])}
-			</p>
-
-		</div>
-
-	</Window>
-
-</section>
+	</section>
+</div>
 

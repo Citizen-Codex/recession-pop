@@ -5,9 +5,9 @@
 	const content = page.data['economy'];
 </script>
 
-<section class="sections column w-full bg-black text-white">
+<section class="sections w-full bg-black text-white">
 
-	<div class="relative">
+	<div class="relative column">
 
 		<p class="heading text-left">
 			{@html md(content.hed)}

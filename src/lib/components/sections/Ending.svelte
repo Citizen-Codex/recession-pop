@@ -7,42 +7,45 @@
 	const content = page.data['ending'];
 </script>
 
-<section class="sections text-white max-w-5xl mx-auto">
+<div class="min-h-screen w-full bg-black">
+    <div class="column max-w-7xl">
+    <section class="sections text-white max-w-5xl mx-auto">
 
-	<Window>
+        <Window>
 
-		<div class="mx-28 text-left relative">
+            <div class="mx-28 text-left relative">
 
-			<img src="assets/icons/pink-triangle.svg"
-            alt="pink triangle icon"
-            class="absolute top-[300px] left-[-100px]"
-            />
+                <img src="assets/icons/pink-triangle.svg"
+                alt="pink triangle icon"
+                class="absolute top-[300px] left-[-100px]"
+                />
 
-            <img src="assets/icons/loud.svg"
-            alt="loud icon"
-            class="absolute top-0 right-[-110px]"
-            />
+                <img src="assets/icons/loud.svg"
+                alt="loud icon"
+                class="absolute top-0 right-[-110px]"
+                />
 
-            <img src="assets/icons/headphone.svg"
-            alt="headphone icon"
-            class="absolute top-[750px] right-[-140px]"
-            />
+                <img src="assets/icons/headphone.svg"
+                alt="headphone icon"
+                class="absolute top-[750px] right-[-140px]"
+                />
 
-			<p class="body">
-				{@html md(content['content-before'])}
-			</p>
+                <p class="body">
+                    {@html md(content['content-before'])}
+                </p>
 
-			<Quote 
-			quote={md(content['quote'])}
-			color="#CBFDC2" />
+                <Quote 
+                quote={md(content['quote'])}
+                color="#CBFDC2" />
 
-			<p class="body">
-				{@html md(content['content-after'])}
-			</p>
+                <p class="body">
+                    {@html md(content['content-after'])}
+                </p>
 
-		</div>
+            </div>
 
-	</Window>
+        </Window>
 
-</section>
-
+    </section>
+</div>
+</div>

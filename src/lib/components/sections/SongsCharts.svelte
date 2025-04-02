@@ -196,7 +196,7 @@
 				>
 					<AxisYRight 
 						scale={unemYScale}
-						axisTitle="Unemployment rate"
+						axisTitle="Unemployment rate (%)"
 						titleDisplace=35
 					/>
 				</div>

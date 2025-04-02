@@ -19,46 +19,31 @@
 <main class="flex flex-col items-center">
 	<Hero />
 
-	<Divider />
+	<Divider type={'normal'} />
 
-	<div class="relative">
-
-		<div class="w-full bg-white">
-			<div class="column">
-				<Intro />
-			</div>
+	<!-- Section with divider as background -->
+	<div class="min-h-screen w-full bg-white relative">
+		<div class="absolute rotate-180 bottom-0 z-0">
+		  <Divider type="normal" />
 		</div>
-
-		<div class="rotate-180">
-			<Divider />
-		</div>
-
+		<Intro />
 	</div>
 
-	<div class="w-full bg-black">
-		<div class="column">
-			<MusicEconomy />
+
+	<MusicEconomy />
+	<ChartScrolly />
+
+	<!-- Section with divider as background -->
+	<div class="min-h-screen w-full bg-black relative">
+		<div class="absolute top-[45%]">
+		  <Divider type="trans" />
 		</div>
-	</div>
 
-	<div class="w-full bg-black">
-		<ChartScrolly />
-	</div>
-
-	<div class="min-h-screen w-full bg-black">
-		<div class="column max-w-7xl">
-			<Vibecession />
-		</div>
-	</div>
-
-	<div class="w-full bg-black">
+		<Vibecession />
 		<MusicPlayer />
-	</div>
-
-	<div class="min-h-screen w-full bg-black">
-		<div class="column max-w-7xl">
-			<Ending />
-		</div>
-	</div>
+	  </div>
+	<!--  -->
+	  
+	<Ending />
 	
 </main>
