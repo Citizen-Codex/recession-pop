@@ -1,10 +1,12 @@
 <!-- 
 animation from https://scroll-driven-animations.style/demos/cover-flow/css/
-polyfill from https∑://github.com/flackr/scroll-timeline
+polyfill from https://github.com/flackr/scroll-timeline
+
+// import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 -->
 
 <script>
-	// import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+	
 
 	let albums = [
 		{ src: '/assets/covers/brat.jpeg', alt: 'Album cover 1' },
@@ -19,8 +21,8 @@ polyfill from https∑://github.com/flackr/scroll-timeline
 	];
 </script>
 
-<div class="cards-wrapper">
-	<ul class="cards">
+<div class="cards-wrapper overflow-x-auto overflow-y-hidden mx-auto flex flex-col justify-center border-blue-600 border-3">
+	<ul class="cards inline-flex list-none whitespace-nowrap p-0 m-0 justify-start">
 		{#each albums as album}
 			<li>
 				<img src={album.src} alt={album.alt} />
@@ -34,33 +36,14 @@ polyfill from https∑://github.com/flackr/scroll-timeline
 		--cover-size: 300px;
 	}
 
-	/* Contain the covers in the wrapper */
 	.cards-wrapper {
-		overflow-x: auto; /* Make horizontally scrollable */
-		overflow-y: hidden; /* Prevent vertical scrolling */
-		max-width: calc(var(--cover-size) * 3); /* Limit visible width to 3 covers */
+		max-width: calc(var(--cover-size) * 3);
 		height: calc(var(--cover-size) * 3);
-		margin: 0 auto; /* Center the wrapper on page */
-		/* border: 5px solid blue; */
-		display: flex; /* Add flexbox */
-		flex-direction: column; /* Column direction */
-		justify-content: center; /* Vertical centering */
 		scroll-snap-type: x mandatory;
 	}
-
-	/* Horizontal list with scroll snapping */
-	.cards {
-		display: inline-flex; /* Flex for smoother alignment */
-		list-style: none;
-		white-space: nowrap;
-		padding: 0;
-		margin: 0;
-		justify-content: flex-start;
-	}
-
-	/* Each album cover item */
+	
 	.cards li {
-		flex: 0 0 auto; /* Prevent shrinking or growing */
+		flex: 0 0 auto;
 		width: var(--cover-size);
 		aspect-ratio: 1;
 		scroll-snap-align: center;
