@@ -1,5 +1,6 @@
 <script>
 	import Window from '$lib/components/helpers/Window.svelte';
+    import AudioPlayer from '$lib/components/helpers/AudioPlayer.svelte';
 	import Quote from '$lib/components/helpers/Quote.svelte';
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
@@ -30,8 +31,23 @@
                 class="absolute top-[750px] right-[-140px]"
                 />
 
-                <p class="body">
+                <p class="body pb-0">
                     {@html md(content['content-before'])}
+                </p>
+
+                <p class="body pt-0 mt-[24px]">
+                    2014 was described as “<a href='https://www.usnews.com/news/articles/2014/12/30/2014-the-us-economys-breakout-year'>The U.S. Economy's Breakout Year</a>,” with bad inflation and high unemployment already in the rearview mirror. Yet 2014 was also when Pitbull and Ne-Yo released 
+                    
+                    <AudioPlayer
+                        source={'assets/songs/pitbull_time.mp3'}
+                        start={'00:00'}
+                        stop={'00:32'}
+                        title={'Time of Our Lives'}
+                        color1={'rgba(181, 1, 254, 0.35)'}
+                        color2={'#C452FE'}
+                    />,
+                
+                proving that the recession, or at least the fear of being in one, was still in the room with us.
                 </p>
 
                 <Quote 

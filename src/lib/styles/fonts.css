@@ -29,3 +29,19 @@
   font-display: swap;
   src: url('/fonts/Orbitron.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/WorkSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Jersey 20';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Jersey20.ttf') format('truetype');
+}

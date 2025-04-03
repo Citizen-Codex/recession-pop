@@ -80,7 +80,7 @@ music:
 
 
       Out of these turbulent years came the disco scene, where Black, Latino, and gay communities could find liberation, self-expression, and freedom through exuberant fashion and music on the dance floor. Disco left the underground clubs of New York and Philadelphia and hit mainstream popularity after the release of the dance film Saturday Night Fever, achieving global commercial success in the late 70s.
-    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0ohVWKOiRdtwWZsOv2Q33X?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0ohVWKOiRdtwWZsOv2Q33X?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#FFD000">1980</span>'
     content: |
@@ -88,7 +88,7 @@ music:
 
 
       The 1980s also ushered in a revolutionizing force in the American entertainment industry: MTV. The channel popularized music videos as a key promotional tool for shaping an artist's image and connecting with audiences. This strategy propelled artists like Madonna, Prince, and Michael Jackson into superstardom as visual storytelling and dance choreography became integral to their music.
-    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1Eppf4hFPTo4uh?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2rvNsfhCtoxl3YsRUCUxeV?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#957AFF">1990</span>'
     content: |
@@ -97,7 +97,7 @@ music:
       Electronic music continued to evolve, drawing inspiration from Europe’s techno, rave, and drum & bass scene. But the radios were dominated by a diverse mix of other genres: alternative rock bands like Nirvana, R&B soloists like Mariah Carey and Whitney Houston, boy bands and girl groups, and pioneers of the golden age of hip hop.
       
       Perhaps the popularity of these other genres, combined with the absence of a major recession, kept the escapist recession pop songs of previous decades off the Billboard charts. It wouldn’t be long, though, before they came back with a vengeance.
-    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2CmOS4b7BMeYJSepxY68R9?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    embed: 
 
   - year: '<span style="color:#FE88F9">2000 <br> 2010</span>'
     content: |
@@ -106,7 +106,7 @@ music:
       These were the true recession pop years. Think Katy Perry, Lady Gaga, Kesha, The Black Eyed Peas, Rihanna, Pitbull. Think blissed-out club hits about living it up and going out tonight. If you can’t make rent tomorrow anyway, might as well spend your last $10 on drinks!
       
       While the recession was declared contained by June 2009, this genre didn’t peak until 2011-2012, making up 25% of the top 100 Billboard songs for the year. Even as the economy slowly began to recover, it was clear that the public needed this outlet, if only as a coping mechanism to weather the brutal aftershocks that lingered in their lives. 
-    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1Eppf4hFPTo4uh?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1hVN4zpLr075BoUOTRCBtB?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#44FF8F">2020</span>'
     content: |
@@ -115,7 +115,7 @@ music:
       Now, with clubs fully reopened and festivals back in full swing, music has returned to the sonic cheer of the late aughts, despite not having a recession to accompany it. Beyonce’s Renaissance paid homage to Black dance music through an eclectic blend of disco, house, and ballroom. Chappell Roan’s meteoric rise to fame last year brought back slumber party pop and fun “Y.M.C.A.”-esque crowd choreography.   
        
       Moreover, if you haven’t heard of Charli XCX’s Brat, were you even around last summer? Though its songs did not make it to the Billboard year-end charts (perhaps because the album begs for a full listen in its entirety), its wild, frenzied soundscape evokes the party anthems of the Great Recession, despite being released during a relatively good year for the economy.
-    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1Eppf4hFPTo4uh?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3cOJ324fwUzSBnNeLlK026?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 
 ending:
@@ -125,8 +125,6 @@ ending:
 
     The vibecession theory thus provides a framework for understanding this dissonance between the state of the world and the type of music that emotionally resonates with us. Recession pop signals a collective anxiety over the stress of structural forces that continue to leech into our lives. When the vibes are down, we cling to these material fantasies of luxury, excess, and indulgence. They provide an illusion of economic agency in a world that increasingly denies it—even as the economy grows wealthier than ever.
 
-
-    2014 was described as “<a href='https://www.usnews.com/news/articles/2014/12/30/2014-the-us-economys-breakout-year'>The U.S. Economy's Breakout Year</a>,” with bad inflation and high unemployment already in the rearview mirror. Yet 2014 was also when Pitbull and Ne-Yo released “Time of Our Lives,” proving that the recession, or at least the fear of being in one, was still in the room with us.
 
   quote: >
       I knew my rent was gon' be late

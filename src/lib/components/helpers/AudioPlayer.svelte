@@ -110,7 +110,7 @@
 		display: inline-flex;
 		vertical-align: middle;
 		position: relative;
-		max-width: 180px;
+		max-width: 350px;
 		height: 35px;
 		overflow: hidden;
 		color: black;
