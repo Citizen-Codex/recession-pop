@@ -1,5 +1,6 @@
 <script>
 	import Window from '$lib/components/helpers/Window.svelte';
+    import Wordmark from '$lib/components/helpers/Wordmark.svelte';
     import AudioPlayer from '$lib/components/helpers/AudioPlayer.svelte';
 	import Quote from '$lib/components/helpers/Quote.svelte';
 	import { page } from '$app/state';
@@ -65,3 +66,4 @@
     </section>
 </div>
 </div>
+

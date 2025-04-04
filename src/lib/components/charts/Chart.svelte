@@ -169,7 +169,7 @@
     stroke="#A6F9FF"
     stroke-width="5" 
     in:draw={{duration: 2000}}
-    pathLength={10}
+    pathLength={8}
     out:fade={{duration: 500}}
   />
 {/if}

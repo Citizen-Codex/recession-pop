@@ -63,11 +63,11 @@
 
 			<p class="body mt-[24px] pt-0">She’s not the only one getting people dancing again.</p>
 		</section>
+	</div>
 
-		<div class="flex items-center justify-center">
-			<AlbumScrolly />
-		</div>
-
+	<AlbumScrolly />
+		
+	<div class="column">
 		<section class="sections">
 			<p class="body">
 				{@html md(content['content-after'])}

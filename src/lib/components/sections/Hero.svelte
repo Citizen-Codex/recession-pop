@@ -14,7 +14,7 @@
 		<Background />
 	</div>
 
-	<div class="mb-20">
+	<div class="mb-15 max-w-50">
 		<Wordmark />
 	</div>
 

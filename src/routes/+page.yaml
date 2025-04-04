@@ -19,6 +19,13 @@ intro:
 
     As Lady Gaga herself puts it in her newest song: “Dance…or die.”
 
+albums:
+  steps:
+    - content: Last summer, songs from Charli XCX’s “Brat” album duked it out with Sabrina Carpenter’s “Espresso” and Chappell Roan’s “HOT TO GO!” for airtime in radios, clubs, and college parties across the nation. (All three artists also just won big at the Grammys.)
+    - content: This turn towards music you can dance-your-heart-out-to harks back to the genre that reigned supreme between 2008-2012.
+    - content: “Recession pop,” as coined by users on TikTok last year, refers to the music that soundtracked the Great Recession of 2008, with songs like “I Gotta Feeling” by The Black Eyed Peas, “Tik Tok” by Kesha, and “Party in the USA” by Miley Cyrus. 
+    - content: These songs promised the anxious masses a good time tonight, every night, away from the economic turmoil raging outside. 
+
 
 economy:
   hed: Music and the Economy
@@ -145,3 +152,21 @@ ending:
 
   content-after: >
     The economic truth is one thing, but our perception of it is another. The fabric of our lived reality—what we read on the internet, hear on the news, or talk to other people about—plays a greater role in shaping our perspective on the world than objective indicators like GDP growth or inflation rates. So it makes sense that we continue to crave these escapist party anthems even when a recession is over. When groceries are expensive and saving for retirement feels like a pipe dream, who says we’re <b><i>not</b></i> still in one?
+
+citations:
+  credits:
+    - title: 'Editor:'
+      name: Nicole Varela
+    - title: 'Design:'
+      name: MaSara Myers & Chloe Phan
+    - title: 'Engineer:'
+      name: Florina Sutanto
+  
+  links:
+    - https://culturaleconomics.org/songs-of-optimism-for-troubled-times-music-preferences-amid-socio-economic-challenges/  
+    - https://link.springer.com/article/10.1007/s10902-024-00757-4 
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC9358113/ 
+    - https://www.bowiecreators.com/article/retrospective-on-disco-and-gay-emancipation
+    - https://fashion2fiber.osu.edu/exhibits/show/fashion-and-music/1970s--disco-glam-vs--recessio
+    - https://www.vox.com/culture/2018/7/30/17561470/music-of-inequality
+    - https://www.hotknifemag.com/read-1/towards-a-theory-of-recession-pop 

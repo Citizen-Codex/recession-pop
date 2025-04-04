@@ -13,7 +13,6 @@
 	.stroke {
 		font-size: 50px;
 		font-family: 'Jersey 20';
-		font-style: italic;
 		font-weight: 900;
 		line-height: 1em;
 		word-wrap: break-word;

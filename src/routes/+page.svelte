@@ -8,6 +8,8 @@
 	import ChartScrolly from '$lib/components/sections/ChartScrolly.svelte';
 	import MusicPlayer from '$lib/components/sections/MusicPlayer.svelte';
 	import Ending from '$lib/components/sections/Ending.svelte';
+	import Citations from '$lib/components/sections/Citations.svelte';
+	import Footer from '$lib/components/sections/Footer.svelte';
 
 
 	const { data } = $props();
@@ -45,5 +47,7 @@
 	<!--  -->
 	  
 	<Ending />
+	<Citations />
+	<Footer />
 	
 </main>

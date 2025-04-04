@@ -31,6 +31,8 @@
 			<img src={album.src} alt={album.alt} class="cover" />
 		{/each}
 	</div>
+
+
 </div>
 
 <style>

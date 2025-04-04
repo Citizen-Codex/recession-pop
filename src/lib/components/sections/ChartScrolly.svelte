@@ -23,7 +23,7 @@
 </script>
 
 <div class="w-full bg-black">
-	<section class="top-0 relative w-4/5 gap-16 mx-auto">
+	<section class="top-0 relative w-4/5 gap-16 mx-auto z-0">
 		<div class="sticky top-0 transition-all duration-5000 min-h-screen m-0 z-0 flex items-center justify-center">
 			<div class="w-full h-full">
 				<SongsCharts {scrollIndex} />
@@ -32,7 +32,7 @@
 		
 		<div class="h-[50vh]" />
 
-		<div class="relative z-10 pointer-events-none max-w-xl mx-auto">
+		<div class="relative z-10 pointer-events-none max-w-xl mx-auto z-10">
 			<Scrolly bind:value={scrollIndex}>
 				{#each content.steps as step, i (i)}
 					<div class="flex flex-col items-center justify-center gap-4 mb-[90vh]">
