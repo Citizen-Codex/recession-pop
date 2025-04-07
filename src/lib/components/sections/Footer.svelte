@@ -51,10 +51,12 @@
 			href: 'mailto:hello@citizencodex.com?subject=Website%20Enquiry'
 		}
 	];
+
+console.log(page.data.title)
 </script>
 
 <div class="flex flex-col gap-6 bg-black px-4 py-8 text-white md:px-6 w-full">
-	<a href={page.data.publisher_url} aria-current="page" class="logo-link w-inline-block w--current max-w-[175px]"
+	<a href={page.data.publisher_url} aria-current="page" class="logo-link w-inline-block w--current"
 		><Wordmark /></a
 	>
 
