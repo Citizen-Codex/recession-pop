@@ -39,3 +39,7 @@
 @utility sections {
   @apply py-24;
 }
+
+@utility label {
+  @apply font-mono text-sm leading-tight;
+}

@@ -1,5 +1,8 @@
-title: Rent Madness
-description: Why is America’s rental data so bad, why does it matter, and what can we do about it?
+title: Dancing in the Dark
+description: In times of crisis, do we all just want ot go out and dance?
 publisher: Citizen Codex
 publisher_url: https://citizencodex.com
-site_url: https://rentmadness.citizencodex.com
+site_url: https://recession-pop.vercel.app
+image:
+  src: https://recession-pop.vercel.app/thumbnail.png
+  alt: Dancing in the Dark

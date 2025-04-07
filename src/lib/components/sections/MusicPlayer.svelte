@@ -66,7 +66,7 @@
                 id={`section-${i}`}
               >
                 <div class="flex flex-col">
-                  <h1 class="font-robo text-white text-9xl">
+                  <h1 class="font-robo text-white text-9xl"> <!-- sticky top-0 -->
                     {@html md(entry.year)}
                   </h1>
                   <p class="body text-white">
