@@ -52,7 +52,6 @@
 		}
 	];
 
-console.log(page.data.title)
 </script>
 
 <div class="flex flex-col gap-6 bg-black px-4 py-8 text-white md:px-6 w-full">
