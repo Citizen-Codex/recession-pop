@@ -10,7 +10,7 @@
 
         <!-- Credits  -->
         <div class="credits text-black text-[14px]">
-            <div class="grid [grid-template-columns:repeat(3,auto)] gap-x-[19%]">
+            <div class="grid [grid-template-columns:repeat(3,auto)] justify-between">
                 {#each content.credits as credit}
                     <div class="flex flex-col">
                         <p class="font-normal leading-tight">{@html md(credit.title)}</p>

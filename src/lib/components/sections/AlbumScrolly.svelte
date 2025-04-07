@@ -10,7 +10,7 @@
 	let isFullyVisible = false;
 	let isLocked = false;
 
-	
+	// parallax scrolling
 	onMount(() => {
 	let hasScrolledIntoView = false;
 
@@ -22,7 +22,7 @@
 
 					if (!isLocked) {
 						isLocked = true;
-						wrapper.scrollIntoView({ behavior: 'instant', block: 'start' }); // force-snap
+						wrapper.scrollIntoView({ behavior: 'instant', block: 'start' }); 
 					}
 				} else {
 					isFullyVisible = false;

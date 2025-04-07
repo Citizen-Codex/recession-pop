@@ -3,7 +3,6 @@
 	import Divider from '$lib/components/helpers/Divider.svelte';
 	import Intro from '$lib/components/sections/Intro.svelte';
 	import MusicEconomy from '$lib/components/sections/MusicEconomy.svelte';
-	import Songs from '$lib/components/sections/SongsCharts.svelte';
 	import Vibecession from '$lib/components/sections/Vibecession.svelte';
 	import ChartScrolly from '$lib/components/sections/ChartScrolly.svelte';
 	import MusicPlayer from '$lib/components/sections/MusicPlayer.svelte';

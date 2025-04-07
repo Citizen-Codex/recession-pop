@@ -37,12 +37,12 @@
                 </p>
 
                 <p class="body pt-0 mt-[24px]">
-                    2014 was described as “<a href='https://www.usnews.com/news/articles/2014/12/30/2014-the-us-economys-breakout-year'>The U.S. Economy's Breakout Year</a>,” with bad inflation and high unemployment already in the rearview mirror. Yet 2014 was also when Pitbull and Ne-Yo released 
+                    2014 was described as “<a href='https://www.usnews.com/news/articles/2014/12/30/2014-the-us-economys-breakout-year' class="underline">The U.S. Economy's Breakout Year</a>,” with bad inflation and high unemployment already in the rearview mirror. Yet 2014 was also when Pitbull and Ne-Yo released 
                     
                     <AudioPlayer
                         source={'assets/songs/pitbull_time.mp3'}
                         start={'00:00'}
-                        stop={'00:32'}
+                        stop={'00:31'}
                         title={'Time of Our Lives'}
                         color1={'rgba(181, 1, 254, 0.35)'}
                         color2={'#C452FE'}

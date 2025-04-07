@@ -29,7 +29,7 @@
 					color2={'#FF6347'}
 				/> 
 				
-				has her fans rejoicing the return of <a href="https://www.2470mag.com/old-tesramnet-gaga-is/">Old Testament Gaga</a>.
+				has her fans rejoicing the return of <a href="https://www.2470mag.com/old-tesramnet-gaga-is/" class="underline">Old Testament Gaga</a>.
 
 				With its devilish imagery and dancey, chanty electro-house style, her song evokes an era when iconic hits like <AudioPlayer
 				source={'assets/songs/ladygaga_justdance.mp3'}
