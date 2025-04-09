@@ -68,14 +68,10 @@
 	<AlbumScrolly />
 		
 	<div class="column">
-		<section class="sections">
+		<section class="sections pt-0">
 			<p class="body">
 				{@html md(content['content-after'])}
 			</p>
-
-			<!-- <div class="w-96 justify-center flex mx-auto">
-				<img src="assets/tweet.png" alt="tweet"/>
-			</div> -->
 
 			<div class="mx-auto flex w-96 justify-center">
 				<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" align="center">

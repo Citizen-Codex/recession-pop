@@ -248,8 +248,9 @@
     stroke="#A6F9FF"
     stroke-width="5" 
     in:draw={{duration: 2000}}
-    pathLength={10}
     out:fade={{duration: 500}}
+    pathLength={10}
+    class="fade-in"
   />
 {/if}
 
@@ -263,6 +264,7 @@
     in:draw={{duration: 5000}}
     pathLength={12}
     out:fade={{duration: 500}}
+    class="fade-in"
   />
 {/if}
 
@@ -340,6 +342,15 @@
   @keyframes draw-left-right-reverse {
     from { opacity: 1; transform: scaleX(1); }
     to   { opacity: 0; transform: scaleX(0); }
+  }
+
+  .fade-in {
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+  @keyframes fadeIn {
+    from  { opacity: 0; }
+    to    { opacity: 1; }
   }
 
 </style>
