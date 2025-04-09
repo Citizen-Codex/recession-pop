@@ -63,10 +63,6 @@
 		// Apply horizontal scrolling proportionally
 		albumsContainer.scrollLeft = (relativeScroll / (contentHeight - window.innerHeight)) * albumsWidth;
 		textContainer.scrollLeft = (relativeScroll / (contentHeight - window.innerHeight)) * textWidth;
-		
-		// Add sticky positioning when in the scroll area
-		wrapper.style.position = 'sticky';
-		wrapper.style.top = '0';
 	  }
 	}
   </script>
@@ -85,8 +81,8 @@
 		<div class="flex flex-row">
 		  {#each content.steps as step, i (i)}
 			<div class="min-w-[100vw] flex justify-center items-start">
-			  <div class="border-3 border-black bg-white px-8 shadow-[6px_6px_0px_#2DF70A] max-w-xl inline-block">
-				<p class="body">
+			  <div class="border-3 border-black bg-white shadow-[6px_6px_0px_#2DF70A] max-w-xl inline-block">
+				<p class="body py-8 px-8">
 				  {@html md(step.content)}
 				</p>
 			  </div>

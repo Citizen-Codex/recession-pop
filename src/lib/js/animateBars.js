@@ -39,7 +39,7 @@ export async function animateYear({
         await wait(currentSpeed);
       }
 
-      // If we're freezing now, don't collapse — finalize and return
+      // If freezing now, don't collapse — finalize and return
       if (freezeNow || freezeAfterLoop()) {
         setVisibleByYear(yearIndex, { base, animating });
         return;

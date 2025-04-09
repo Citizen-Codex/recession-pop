@@ -15,8 +15,9 @@
 	}
 
 	$: shadowClass = 
-	(scrollIndex >= 0 && scrollIndex <= 4) ? 'shadow-[6px_6px_0px_#01EFFE]' :
-	(scrollIndex >= 5 && scrollIndex <= 8) ? 'shadow-[6px_6px_0px_#FFD000]' :
+	(scrollIndex >= 0 && scrollIndex <= 1) ? 'shadow-[6px_6px_0px_#FFD000]' :
+	(scrollIndex >= 2 && scrollIndex <= 4) ? 'shadow-[6px_6px_0px_#D3D3D3]' :
+	(scrollIndex >= 5 && scrollIndex <= 8) ? 'shadow-[6px_6px_0px_#01EFFE]' :
 	(scrollIndex >= 9) ? 'shadow-[6px_6px_0px_#FE88F9]' :
 	'';
 
