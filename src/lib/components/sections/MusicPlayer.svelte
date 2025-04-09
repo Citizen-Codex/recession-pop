@@ -30,7 +30,7 @@
 
 
 <div class="w-full bg-black">
-    <div class="relative flex h-[80vh] w-[85%] mx-auto overflow-hidden rounded border border-[#B1B0B0] backdrop-blur-md shadow-[0_0_16px_1px_rgba(45,247,10,0.5)] bg-gradient-to-b from-black/60 to-zinc-700/50 px-12 my-20">
+    <div class="relative flex h-[80vh] w-[85%] mx-auto overflow-hidden rounded border-2 border-[#B1B0B0] backdrop-blur-md shadow-[0_0_16px_1px_rgba(45,247,10,0.5)] bg-gradient-to-b from-black/60 to-zinc-700/50 my-20">
 
       <!-- Pagination dots -->
       <div class="absolute top-17 left-8 z-20 flex flex-col gap-3">
@@ -54,7 +54,7 @@
       </div>
       
       <!-- Internal container -->
-      <div class="w-full overflow-y-scroll snap-y snap-mandatory text-scroll scroll-smooth no-scrollbar flex flex-row"> <!--  border-orange-300 border-2 -->
+      <div class="w-full overflow-y-scroll snap-y snap-mandatory text-scroll scroll-smooth no-scrollbar flex flex-row px-10"> <!--  border-orange-300 border-2 -->
 
         <!-- Text -->
         <div class="w-[55%]">

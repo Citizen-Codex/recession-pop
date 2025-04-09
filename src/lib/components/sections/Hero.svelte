@@ -26,7 +26,7 @@
 
 		<div class="relative">
 			<!-- Subheading  -->
-			<div class="-mt-20 max-w-lg uppercase text-xl">
+			<div class="-mt-20 max-w-xl uppercase text-4xl font-title">
 			  <Window>
 				{@html md(page.data.dek)}
 			  </Window>

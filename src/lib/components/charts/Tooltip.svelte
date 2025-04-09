@@ -25,7 +25,7 @@
 <style>
 	.tooltip {
 		position: absolute;
-		width: 200px;
+		max-width: 200px;
 		border: 1px solid #ccc;
 		font-size: 12px;
 		background: white;

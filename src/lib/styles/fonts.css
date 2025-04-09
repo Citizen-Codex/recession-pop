@@ -1,12 +1,4 @@
 @font-face {
-  font-family: 'Junicode';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/Junicode.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 100 900;
@@ -28,14 +20,6 @@
   font-weight: 100 900;
   font-display: swap;
   src: url('/fonts/Orbitron.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/WorkSans.ttf') format('truetype');
 }
 
 @font-face {

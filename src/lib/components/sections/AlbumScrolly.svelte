@@ -97,11 +97,11 @@
 	  </div>
 	</div>
 	
-	<div bind:this={textContainer} class="w-full overflow-x-hidden">
-		<div class="flex flex-row min-w-max">
+	<div bind:this={textContainer} class="w-full overflow-x-hidden py-4">
+		<div class="flex flex-row">
 		  {#each content.steps as step, i (i)}
-			<div class="min-w-[100vw] flex justify-center"> <!-- border-amber-600 border-2 !-->
-			  <div class="border-3 border-black bg-white px-8 shadow-[6px_6px_0px_#2DF70A] max-w-xl">
+			<div class="min-w-[100vw] flex justify-center items-start"> <!-- border-amber-500 border-3 !-->
+			  <div class="border-3 border-black bg-white px-8 shadow-[6px_6px_0px_#2DF70A] max-w-xl inline-block">
 				<p class="body">
 				  {@html md(step.content)}
 				</p>

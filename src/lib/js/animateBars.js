@@ -5,20 +5,20 @@ export async function animateYear({
   allSegments,
   setVisibleByYear,
   shouldStop,
-  freezeAfterLoop
+  freezeAfterLoop,
+  onForceFreeze = () => false // new hook to trigger immediate freeze
 }) {
   const base = allSegments[0];
   const animating = allSegments.slice(1);
 
   const normalSpeed = 120 + Math.random() * 60;
-  const freezeSpeed = 30; // speed up when freezing
-
+  const freezeSpeed = 10;
   let freezeNow = false;
 
   async function loop() {
     while (!shouldStop()) {
-      // Pre-check if we should enter freeze cycle
-      if (freezeAfterLoop()) {
+      // Immediate freeze override
+      if (onForceFreeze()) {
         freezeNow = true;
       }
 
@@ -28,6 +28,9 @@ export async function animateYear({
       // Build
       for (let i = 0; i <= animating.length; i++) {
         if (shouldStop()) return;
+        if (onForceFreeze()) {
+          freezeNow = true;
+        }
         setVisibleByYear(yearIndex, {
           base,
           animating: animating.slice(0, i)
@@ -36,13 +39,13 @@ export async function animateYear({
         await wait(currentSpeed);
       }
 
-      await wait(currentPause);
-
-      if (freezeNow) {
-        // Final state
+      // If we're freezing now, don't collapse — finalize and return
+      if (freezeNow || freezeAfterLoop()) {
         setVisibleByYear(yearIndex, { base, animating });
         return;
       }
+
+      await wait(currentPause);
 
       // Collapse
       for (let i = animating.length - 1; i >= 0; i--) {

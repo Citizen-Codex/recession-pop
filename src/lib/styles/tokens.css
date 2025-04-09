@@ -1,8 +1,8 @@
 @theme {
   --font-mono: 'Roboto Mono', 'monospace';
-  --font-sans: 'Work Sans', 'sans-serif';
+  --font-sans: 'Work Sans', 'sans serif';
   --font-robo: 'Orbitron', 'monospace';
-  --font-quote: 'Jersey 20', 'sans-serif'
+  --font-title: 'Jersey 20', 'sans serif';
 
   --color-black-offset: #292929;
   --color-white-offset: #FFF9F2;
@@ -29,7 +29,7 @@
 /* Body */
 
 @utility heading {
-  @apply font-mono text-4xl uppercase font-semibold;
+  @apply font-title text-5xl uppercase font-semibold;
 }
 
 @utility body {

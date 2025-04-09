@@ -14,7 +14,7 @@
 	</div>
 
 	<!-- content -->
-	<div class="border-gray relative border-2 bg-white px-14 py-16 font-mono text-black">
+	<div class="border-gray relative border-2 bg-white px-14 py-16 text-black">
 		<slot />
 	</div>
 </div>

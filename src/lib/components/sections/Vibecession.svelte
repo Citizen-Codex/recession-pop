@@ -14,7 +14,7 @@
 
 			<div class="mx-28">
 
-				<div class="flex items-start gap-12">
+				<div class="flex items-center gap-12 flex">
 					<img src="assets/icons/bulb.svg" alt="bulb icon" />
 					<p class="heading text-left">
 						{@html md(content.hed)}

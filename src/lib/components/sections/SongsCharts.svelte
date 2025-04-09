@@ -243,7 +243,7 @@
 			/>
 		</ScaledSvg>
 
-		{#if !hideTooltip && hoveredSong && evt.detail && scrollIndex <= 4}
+		{#if !hideTooltip && hoveredSong && evt.detail && scrollIndex < 2}
 			<Html pointerEvents={false}>
 				<Tooltip {evt}>
 					<div><strong>{hoveredSong.year}</strong></div>

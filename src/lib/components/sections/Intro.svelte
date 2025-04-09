@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
 
@@ -95,3 +95,4 @@
 		
 	</div>
 </div>
+
