@@ -2,7 +2,6 @@
 	import Background from '$lib/components/helpers/HeroBackground.svelte';
 	import Wordmark from '$lib/components/helpers/Wordmark.svelte';
 	import Window from '$lib/components/helpers/Window.svelte';
-	import AudioButton from '$lib/components/helpers/AudioButton.svelte';
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
 </script>
@@ -15,7 +14,8 @@
 	</div>
 
 	<div class="mb-15 max-w-50 text-white">
-		<Wordmark />
+		<a href={page.data.publisher_url} aria-current="page" class="logo-link w-inline-block w--current"
+		><Wordmark /></a>
 	</div>
 
 	<div class="relative flex flex-col items-center gap-12">
@@ -53,9 +53,5 @@
 			{@html md(page.data.cred)}
 		</p>
 
-		<!-- Audio button -->
-		<div class="">
-			<AudioButton />
-		</div>
 	</div>
 </section>

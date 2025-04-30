@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import Divider from '$lib/components/helpers/Divider.svelte';
+	import AudioButtonDivider from '$lib/components/helpers/AudioButtonDivider.svelte';
 	import Intro from '$lib/components/sections/Intro.svelte';
 	import MusicEconomy from '$lib/components/sections/MusicEconomy.svelte';
 	import Vibecession from '$lib/components/sections/Vibecession.svelte';
@@ -20,7 +21,7 @@
 <main class="flex flex-col items-center">
 	<Hero />
 
-	<Divider type={'normal'} />
+	<AudioButtonDivider />
 
 	<!-- Section with divider as background -->
 	<div class="min-h-screen w-full bg-white relative">
@@ -36,7 +37,7 @@
 
 	<!-- Section with divider as background -->
 	<div class="min-h-screen w-full bg-black relative">
-		<div class="absolute top-[45%]">
+		<div class="absolute top-1/2">
 		  <Divider type="trans" />
 		</div>
 

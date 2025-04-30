@@ -28,7 +28,6 @@
   });
 </script>
 
-
 <div class="w-full bg-black">
     <div class="relative flex h-[80vh] w-[85%] mx-auto overflow-hidden rounded border-2 border-[#B1B0B0] backdrop-blur-md shadow-[0_0_16px_1px_rgba(45,247,10,0.5)] bg-gradient-to-b from-black/60 to-zinc-700/50 my-20">
 
@@ -54,7 +53,7 @@
       </div>
       
       <!-- Internal container -->
-      <div class="w-full overflow-y-scroll snap-y snap-mandatory text-scroll scroll-smooth no-scrollbar flex flex-row px-10"> <!--  border-orange-300 border-2 -->
+      <div class="w-full overflow-y-scroll snap-y snap-mandatory text-scroll scroll-smooth no-scrollbar flex flex-row px-10">
 
         <!-- Text -->
         <div class="w-[55%]">
@@ -80,10 +79,11 @@
         </div>
 
         <!-- Spotify player -->
-        <div class="sticky top-1/2 -translate-y-1/2 w-[45%] flex items-center justify-center min-h-screen">
+        <div class="sticky top-1/2 -translate-y-1/2 w-[45%] flex items-center justify-center min-h-screen flex-col gap-8">
           <div class="w-[80%] rounded-xl shadow-[0_0_16px_1px_rgba(254,136,249,0.5)]">
             {@html content[activeIndex]?.embed}
           </div>
+          <iconify-icon icon="pixel:angle-down" class="text-white h-5 text-4xl opacity-70 animate-bounce"></iconify-icon>
         </div>
         
 

@@ -29,6 +29,8 @@
 	const yKey = 'index';
 	const gdpByYear = {};
 	const unemByYear = {};
+
+	$: console.log('scrollIndex', scrollIndex);
 	
 
 	onMount(async () => {
@@ -158,51 +160,56 @@
 		let:yScale
 	>
 
-		<!-- Axes -->
-		<Html class="pointer-events-none mx-auto">
-			<AxisX 
-				gridlines={false} 
-				tickMarks={true} 
-				baseline={true} />
-			
-			<!-- Left Y axis for song  -->
-			<AxisY 
-				scale={yScale}
-				gridlines={true}
-				snapBaselineLabel={true}
-				axisTitle="No. of songs on the Billboard charts"
-				/>
-
-			<!-- Right Y axis for GDP -->
-			{#if gdpYScale}
-				<div
-					style="transition: opacity 500ms;"
-					style:opacity={scrollIndex === 6 ? 1 : 0}
-				>
-					<AxisYRight 
-						scale={gdpYScale}
-						format={d => `$${d3format('~s')(d)}`}
-						axisTitle="Real GDP ($ billions)"
-						titleDisplace=55
-					/>
-				</div>
-			{/if}
-
-			<!-- Right Y axis for unemployment -->
-			{#if unemYScale}
-				<div
-					style="transition: opacity 500ms;"
-					style:opacity={scrollIndex === 7 ? 1 : 0}
-				>
-					<AxisYRight 
-						scale={unemYScale}
-						axisTitle="Unemployment rate (%)"
-						titleDisplace=35
-					/>
-				</div>
-			{/if}
-
-
+	<Html>
+		<!-- Main axes container -->
+		<div
+			class="opacity-0 transition-opacity duration-500"
+			style:opacity={scrollIndex >= 0 ? 1 : 0}
+		>
+		  <!-- X axis -->
+		  <AxisX
+			gridlines={false}
+			tickMarks={true}
+			baseline={true} />
+		  
+		  <!-- Left Y axis for song -->
+		  <AxisY
+			scale={yScale}
+			gridlines={true}
+			snapBaselineLabel={true}
+			axisTitle="No. of recession pop songs in the Billboard Year-End Hot 100"
+		  />
+		
+		
+		<!-- Right Y axis for GDP -->
+		{#if gdpYScale}
+		  <div
+			style="transition: opacity 500ms;"
+			style:opacity={scrollIndex === 7 ? 1 : 0}
+		  >
+			<AxisYRight
+			  scale={gdpYScale}
+			  format={d => `$${d3format('~s')(d)}`}
+			  axisTitle="Real GDP ($ billions)"
+			  titleDisplace={55}
+			/>
+		  </div>
+		{/if}
+		
+		<!-- Right Y axis for unemployment -->
+		{#if unemYScale}
+		  <div
+			style="transition: opacity 500ms;"
+			style:opacity={scrollIndex === 8 ? 1 : 0}
+		  >
+			<AxisYRight
+			  scale={unemYScale}
+			  axisTitle="Unemployment rate (%)"
+			  titleDisplace={35}
+			/>
+		  </div>
+		{/if}
+		
 		</Html>
 	
 
@@ -243,7 +250,7 @@
 			/>
 		</ScaledSvg>
 
-		{#if !hideTooltip && hoveredSong && evt.detail && scrollIndex < 2}
+		{#if !hideTooltip && hoveredSong && evt.detail && scrollIndex < 3}
 			<Html pointerEvents={false}>
 				<Tooltip {evt}>
 					<div><strong>{hoveredSong.year}</strong></div>

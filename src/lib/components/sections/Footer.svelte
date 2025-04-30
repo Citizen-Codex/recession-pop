@@ -64,7 +64,6 @@
 			<a {href}>{title}</a>
 		{/each}
 	</div>
-
 	<div class="flex w-full flex-wrap items-end justify-between gap-3">
 		<div class="label text-xs">2025 Copyright, Citizen Codex LLC.</div>
 		<div class="flex items-center gap-2">

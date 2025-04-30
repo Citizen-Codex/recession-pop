@@ -12,7 +12,7 @@
 
 		<Window>
 
-			<div class="mx-28">
+			<div class="mx-28 my-10">
 
 				<div class="flex items-center gap-12 flex">
 					<img src="assets/icons/bulb.svg" alt="bulb icon" />

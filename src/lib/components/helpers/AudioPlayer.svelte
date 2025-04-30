@@ -49,7 +49,7 @@
 		stopSeconds = parseTimeString(stop);
 		segmentDuration = stopSeconds - startSeconds;
 
-		track.volume = 0.5;
+		track.volume = 0.3;
 
 		track.addEventListener('ended', () => {
 			isPlaying = false;

@@ -13,6 +13,10 @@
     a {
       @apply font-normal underline;
     }
+
+    span.highlighted {
+      @apply -mx-0.5 rounded px-0.5;
+    }
   }
 
   iconify-icon {

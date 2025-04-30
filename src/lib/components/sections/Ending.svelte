@@ -1,6 +1,5 @@
 <script>
 	import Window from '$lib/components/helpers/Window.svelte';
-    import Wordmark from '$lib/components/helpers/Wordmark.svelte';
     import AudioPlayer from '$lib/components/helpers/AudioPlayer.svelte';
 	import Quote from '$lib/components/helpers/Quote.svelte';
 	import { page } from '$app/state';
@@ -15,7 +14,7 @@
 
         <Window>
 
-            <div class="mx-28 text-left relative">
+            <div class="mx-28 my-10 text-left relative">
 
                 <img src="assets/icons/pink-triangle.svg"
                 alt="pink triangle icon"
