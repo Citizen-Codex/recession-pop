@@ -12,9 +12,9 @@
 
 		<Window>
 
-			<div class="mx-28 my-10">
+			<div class="md:mx-28 my-10">
 
-				<div class="flex items-center gap-12 flex">
+				<div class="flex items-center gap-12">
 					<img src="assets/icons/bulb.svg" alt="bulb icon" />
 					<p class="heading text-left">
 						{@html md(content.hed)}

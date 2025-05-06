@@ -164,7 +164,7 @@
 		<!-- Main axes container -->
 		<div
 			class="opacity-0 transition-opacity duration-500"
-			style:opacity={scrollIndex >= 0 ? 1 : 0}
+			style:opacity={scrollIndex != undefined ? 1 : 0}
 		>
 		  <!-- X axis -->
 		  <AxisX

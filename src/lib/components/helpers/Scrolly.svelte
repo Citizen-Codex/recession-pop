@@ -28,6 +28,8 @@
 
 	$: top, bottom, update();
 
+	
+
 	const update = () => {
 		if (!nodes.length) return;
 		nodes.forEach(createObserver);
@@ -41,9 +43,10 @@
 				maxRatio = steps[i];
 				maxIndex = i;
 			}
-		}
+					}
 
 		if (maxRatio > 0) value = maxIndex;
+		else value = undefined
 	};
 
 	const createObserver = (node, index) => {

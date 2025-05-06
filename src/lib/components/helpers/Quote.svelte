@@ -3,15 +3,14 @@
     export let color = "";
 </script>
 
-<div class="stroke font-quote">
-	<span class="content" style="color: {color}">
+<div class="stroke text-3xl md:text-5xl">
+	<span class="w-full justify-center flex flex-col" style="color: {color}">
 		{@html quote}
 	</span>
 </div>
 
 <style>
 	.stroke {
-		font-size: 50px;
 		font-family: 'Jersey 20';
 		font-weight: 900;
 		line-height: 1em;
@@ -20,10 +19,6 @@
         -webkit-text-stroke: 1px black;
 	}
 	
-	.content {
-		width: 100%;
-		justify-content: center;
-		display: flex;
-		flex-direction: column;
-	}
 	</style>
+
+	

@@ -6,27 +6,26 @@
 	import md from '$lib/utils/md';
 </script>
 
-<section
-	class="relative flex h-screen w-full flex-col items-center justify-center text-center"
->
+
+<section class="relative flex h-screen w-full flex-col items-center justify-center text-center">
 	<div class="absolute inset-0 -z-10">
 		<Background />
 	</div>
 
-	<div class="mb-15 max-w-50 text-white">
+	<div class="absolute top-8 max-w-50 text-white">
 		<a href={page.data.publisher_url} aria-current="page" class="logo-link w-inline-block w--current"
 		><Wordmark /></a>
 	</div>
 
 	<div class="relative flex flex-col items-center gap-12">
 		<!-- Title -->
-		<div class="max-w-4xl">
+		<div class="max-w-4xl px-4">
 			<img src="/assets/header.png" alt="Header" />
 		</div>
 
 		<div class="relative">
 			<!-- Subheading  -->
-			<div class="-mt-20 max-w-xl uppercase text-4xl font-title">
+			<div class="md:-mt-20 max-w-xl uppercase text-2xl md:text-4xl font-title">
 			  <Window>
 				{@html md(page.data.dek)}
 			  </Window>
@@ -36,14 +35,14 @@
 			<img 
 			  src="assets/icons/notes.svg" 
 			  alt="notes icon" 
-			  class="absolute left-[-100px] top-0"
+			  class="absolute left-[-10vw] top-0"
 			/>
 
 			<!-- Cursor icon -->
 			<img 
 			  src="assets/icons/cursor.svg" 
 			  alt="notes icon" 
-			  class="absolute right-[-30px] top-40"
+			  class="absolute right-0 md:right-[-8vw] top-40"
 			/>
 		  </div>
 		  

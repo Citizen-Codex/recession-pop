@@ -1,6 +1,6 @@
 <section class="absolute top-0 left-0 h-full w-full overflow-hidden">
-    <video autoplay loop muted playsinline preload="auto" class="h-full w-full object-cover">
-      <source src="assets/lights_slow.mp4" type="video/mp4">
+    <video autoplay loop muted playsinline preload="auto" poster="/assets/background_fallback.jpg" class="h-full w-full object-cover">
+      <source src="assets/lights_slow_fixed.mp4" type="video/mp4">
     </video>
     <div class="absolute top-0 left-0 w-full h-full bg-black opacity-75"></div>
   </section>

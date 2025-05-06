@@ -9,7 +9,7 @@
 
 	<div class="relative column">
 
-		<p class="heading text-left">
+		<p class="heading text-left w-xs md:w-full">
 			{@html md(content.hed)}
 		</p>
 
@@ -23,8 +23,8 @@
 		/>
 
 		<img src="assets/icons/money.svg"
-		alt="green note icon"
-		class="absolute top-[60px] right-[-120px]"
+		alt="money icon"
+		class="absolute top-[-40px] right-[20px] md:top-[60px] md:right-[-120px]"
 		/>
 
 	</div>

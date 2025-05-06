@@ -26,17 +26,17 @@
 /* Content structure */
 
 @utility column {
-  @apply max-w-[600px] mx-auto flex flex-col;
+  @apply max-w-[600px] mx-auto flex flex-col px-4 md:px-0;
 }
 
 /* Body */
 
 @utility heading {
-  @apply font-title text-5xl uppercase font-semibold;
+  @apply font-title text-4xl md:text-5xl uppercase font-semibold;
 }
 
 @utility body {
-  @apply font-sans text-xl/relaxed py-12;
+  @apply font-sans text-base md:text-xl leading-relaxed py-12;
 }
 
 @utility sections {
