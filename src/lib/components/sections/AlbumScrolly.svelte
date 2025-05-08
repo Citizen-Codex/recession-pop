@@ -72,7 +72,7 @@
 	  <div bind:this={albumsContainer} class="w-full overflow-hidden">
 		<div class="inline-flex gap-16 p-4 min-w-max">
 		  {#each albums as album}
-			<img src={album.src} alt={album.alt} class="max-w-[350px]" />
+			<img src={album.src} alt={album.alt} class="max-w-[250px] md:max-w-[350px]" />
 		  {/each}
 		</div>
 	  </div>
@@ -81,8 +81,8 @@
 		<div class="flex flex-row">
 		  {#each content.steps as step, i (i)}
 			<div class="min-w-[100vw] flex justify-center items-start">
-			  <div class="border-3 border-black bg-white shadow-[6px_6px_0px_#2DF70A] max-w-xl inline-block">
-				<p class="body py-8 px-8">
+			  <div class="border-3 border-black bg-white shadow-[6px_6px_0px_#2DF70A] max-w-84 md:max-w-xl inline-block">
+				<p class="body py-4 px-4 md:py-8 md:px-8">
 				  {@html md(step.content)}
 				</p>
 			  </div>

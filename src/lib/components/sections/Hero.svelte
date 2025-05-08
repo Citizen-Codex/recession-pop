@@ -25,7 +25,7 @@
 
 		<div class="relative">
 			<!-- Subheading  -->
-			<div class="md:-mt-20 max-w-xl uppercase text-2xl md:text-4xl font-title">
+			<div class="md:-mt-20 md:text-4xl md:px-0 px-4 max-w-xl uppercase text-2xl font-title">
 			  <Window>
 				{@html md(page.data.dek)}
 			  </Window>
@@ -35,14 +35,14 @@
 			<img 
 			  src="assets/icons/notes.svg" 
 			  alt="notes icon" 
-			  class="absolute left-[-10vw] top-0"
+			  class="hidden md:block absolute left-[-10vw] top-0"
 			/>
 
 			<!-- Cursor icon -->
 			<img 
 			  src="assets/icons/cursor.svg" 
 			  alt="notes icon" 
-			  class="absolute right-0 md:right-[-8vw] top-40"
+			  class="absolute right-4 md:right-[-8vw] top-40 w-12 md:w-auto"
 			/>
 		  </div>
 		  
