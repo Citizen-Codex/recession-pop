@@ -5,16 +5,16 @@
     const content = page.data['citations']
 </script>
 
-<section class="w-full bg-[#FFC3FC] min-h-screen p-32 flex items-center justify-center">
-    <div class="max-w-3xl mx-auto">
+<section class="w-full bg-[#FFC3FC] min-h-screen flex items-center justify-center py-20 md:p-24">
+    <div class="max-w-3xl mx-auto px-8 md:px-0">
 
         <!-- Credits  -->
         <div class="credits text-black text-[14px]">
-            <div class="grid [grid-template-columns:repeat(3,auto)] justify-between">
+            <div class="grid [grid-template-columns:repeat(3,auto)] justify-between gap-8 md:gap-0">
                 {#each content.credits as credit}
                     <div class="flex flex-col">
-                        <p class="font-normal leading-tight">{@html md(credit.title)}</p>
-                        <p class="font-medium">{@html md(credit.name)}</p>
+                        <p class="font-normal leading-loose">{@html md(credit.title)}</p>
+                        <p class="font-medium leading-tight">{@html md(credit.name)}</p>
                     </div>
                 {/each}
             </div>
@@ -22,11 +22,11 @@
         
 
         <!-- Citations -->
-        <div class="bg-white border-3 border-black shadow-[6px_6px_0_#000000] p-12 mt-16">
+        <div class="bg-white border-3 border-black shadow-[6px_6px_0_#000000] p-8 md:p-12 mt-16 w-full max-w-full">
             <p class="citations uppercase text-4xl mb-8">Citations</p>
-            <ol class="list-decimal list-outside space-y-2 font-sans pl-5">
+            <ol class="list-decimal list-outside space-y-2 font-sans pl-5 text-sm md:text-base">
                 {#each content.links as link}
-                    <li><a href={link} target='_blank' class="underline">{link}</a></li>
+                    <li><a href={link} target='_blank' class="underline break-all [overflow-wrap:anywhere]">{link}</a></li>
                 {/each}
             </ol>
         </div>

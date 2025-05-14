@@ -8,11 +8,11 @@
 </script>
 
 <div class="column max-w-7xl">
-	<section class="sections text-white max-w-5xl mx-auto">
+	<section class="sections text-white max-w-5xl mx-auto md:px-4">
 
 		<Window>
 
-			<div class="md:mx-28 my-10">
+			<div class="mx-4 md:mx-28 my-10">
 
 				<div class="flex items-center gap-12">
 					<img src="assets/icons/bulb.svg" alt="bulb icon" />

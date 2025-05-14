@@ -29,7 +29,7 @@
 						: '';
 </script>
 
-<div class="w-full bg-black">
+<div class="w-full bg-black px-4 md:p-0 mx-auto">
 	<section class="relative top-0 z-0 mx-auto w-4/5 gap-16">
 		<div
 			class="sticky top-0 z-0 m-0 flex min-h-screen items-center justify-center transition-all duration-5000"
@@ -41,14 +41,14 @@
 
 		<div class="h-[50vh]" />
 
-		<div class="pointer-events-none relative z-10 z-10 mx-auto max-w-xl">
+		<div class="pointer-events-none relative z-10 mx-auto max-w-xl">
 			<Scrolly bind:value={scrollIndex} bind:inView>
 				{#each content.steps as step, i (i)}
 					<div
 						class="pointer-events-auto mb-[90vh] flex flex-col items-center justify-center gap-4"
 					>
-						<div class="body border-3 border-black bg-white px-6 py-0 {shadowClass} w-full">
-							<p class="body text-left">{@html md(step.content)}</p>
+						<div class="body border-3 border-black bg-white px-4 py-4 md:p-8 {shadowClass} w-full">
+							<p class="text-left">{@html md(step.content)}</p>
 						</div>
 					</div>
 

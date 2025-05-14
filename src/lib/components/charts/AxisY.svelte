@@ -142,12 +142,13 @@
 		position: absolute;
 		top: 0;
 		transform: translateY(-3em);
-		font-size: 18px; 
+		font-size: 14px; 
 		color: white;
 		font-family: var(--font-mono);
+		width: 16rem;
 	}
 	.tick {
-		font-size: 16px;
+		font-size: 12px;
 		width: 100%;
 		font-family: var(--font-mono);
 	}
@@ -163,4 +164,15 @@
 	.tick .text {
 		color: white;
 	}
+
+	@media (width >= 64rem) {
+        .axis-title {
+			font-size: 18px;
+			width: auto
+		}
+
+		.tick {
+			font-size: 16px;
+		}
+    }
   </style>

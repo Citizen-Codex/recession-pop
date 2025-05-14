@@ -5,7 +5,7 @@
   Although this is marked as a percent-range component, you can also use it with a normal scale with no configuration needed. By default, if you have `percentRange={true}` it will use percentages, otherwise it will use pixels. This makes this component compatible with server-side and client-side rendered charts. Set the `units` prop to either `'%'` or `'px'` to override the default behavior.
  -->
 <script>
-	import { getContext } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 
 	const { xScale, percentRange } = getContext('LayerCake');
 
@@ -46,14 +46,27 @@
 
 	$: isBandwidth = typeof $xScale.bandwidth === 'function';
 
+	// show ticks every 10 years in mobile, 5 in bigger screens
+	let isMobile = false;
+
+	const checkScreenSize = () => {
+		isMobile = window.matchMedia('(max-width: 640px)').matches; 
+	};
+
+	onMount(() => {
+		checkScreenSize();
+		window.addEventListener('resize', checkScreenSize);
+		return () => window.removeEventListener('resize', checkScreenSize);
+	});
+
 	/** @type {Array<any>} */
 	$: tickVals = Array.isArray(ticks)
-		? ticks.filter((d) => +d % 5 === 0) // Only show ticks every 5 years
+		? ticks.filter((d) => +d % (isMobile ? 10 : 5) === 0)
 		: isBandwidth
-			? $xScale.domain().filter((d) => +d % 5 === 0)
+			? $xScale.domain().filter((d) => +d % (isMobile ? 10 : 5) === 0)
 			: typeof ticks === 'function'
-				? ticks($xScale.ticks()).filter((d) => +d % 5 === 0)
-				: $xScale.ticks(ticks).filter((d) => +d % 5 === 0);
+				? ticks($xScale.ticks()).filter((d) => +d % (isMobile ? 10 : 5) === 0)
+				: $xScale.ticks(ticks).filter((d) => +d % (isMobile ? 10 : 5) === 0);
 
 	$: halfBand = isBandwidth ? $xScale.bandwidth() / 2 : 0;
 </script>
@@ -106,7 +119,7 @@
 		height: 100%;
 	}
 	.tick {
-		font-size: 16px;
+		font-size: 12px;
 		font-family: var(--font-mono);
 	}
 
@@ -134,4 +147,10 @@
 	.axis.snapLabels .tick.tick-0 {
 		transform: translateX(40%);
 	}
+
+	@media (width >= 64rem) {
+		.tick {
+			font-size: 16px;
+		}
+    }
 </style>

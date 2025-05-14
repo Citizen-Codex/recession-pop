@@ -37,7 +37,7 @@
 
 	<!-- Section with divider as background -->
 	<div class="min-h-screen w-full bg-black relative">
-		<div class="absolute top-1/2">
+		<div class="absolute top-[62%] md:top-1/2">
 		  <Divider type="trans" />
 		</div>
 

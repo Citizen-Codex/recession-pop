@@ -10,25 +10,25 @@
 
 <div class="min-h-screen w-full bg-black">
     <div class="column max-w-7xl">
-    <section class="sections text-white max-w-5xl mx-auto">
+    <section class="sections text-white max-w-5xl mx-auto md:px-4">
 
         <Window>
 
-            <div class="mx-28 my-10 text-left relative">
+            <div class="mx-4 md:mx-28 my-10 text-left relative">
 
                 <img src="assets/icons/pink-triangle.svg"
                 alt="pink triangle icon"
-                class="absolute top-[300px] left-[-100px]"
+                class="hidden md:block absolute top-[300px] left-[-100px]"
                 />
 
                 <img src="assets/icons/loud.svg"
                 alt="loud icon"
-                class="absolute top-0 right-[-110px]"
+                class="absolute top-[-30px] right-0 md:top-0 md:right-[-110px] w-18 md:w-auto"
                 />
 
                 <img src="assets/icons/headphone.svg"
                 alt="headphone icon"
-                class="absolute top-[750px] right-[-140px]"
+                class="hidden md:block absolute top-[750px] right-[-140px]"
                 />
 
                 <p class="body pb-0">

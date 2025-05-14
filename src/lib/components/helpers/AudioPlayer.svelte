@@ -113,7 +113,7 @@
 		vertical-align: middle;
 		position: relative;
 		max-width: 350px;
-		height: 35px;
+		height: 30px;
 		overflow: hidden;
 		color: black;
 		justify-content: center;
@@ -141,7 +141,7 @@
 		z-index: 2;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: 12px;
+		background-size: 10px;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
@@ -158,7 +158,21 @@
 	.title {
 		font-family: var(--font-mono);
 		text-transform: uppercase;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 600;
+	}
+
+	@media (width >= 64rem) {
+		.title {
+			font-size: 16px;
+		}
+
+		.play-pause {
+			background-size: 12px;
+		}
+
+		.player-container {
+			height: 35px;
+		}
 	}
 </style>

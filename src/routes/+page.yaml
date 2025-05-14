@@ -107,7 +107,7 @@ music:
       Perhaps the popularity of these other genres, combined with the absence of a major recession, kept the escapist recession pop songs of previous decades off the Billboard charts. It wouldn’t be long, though, before they came back with a vengeance.
     embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0clzFxq5CtcdoBXSoNTE9P?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-  - year: '<span style="color:#FE88F9">2000s</span>'
+  - year: '<span style="color:#FE88F9">2000<span style="font-size:80%;">s</span></span>'
     content: |
       The next two decades were marked by two significant recessions: the dot-com crash of 2001, soon overshadowed by the Great Recession of 2007–2009, which toppled major banks and triggered millions of home foreclosures.
     

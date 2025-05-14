@@ -156,9 +156,11 @@
 
 	<Html>
 		<!-- Main axes container -->
-		<div
+		<div>
+			<!-- <div
 			class="opacity-0 transition-opacity duration-500"
-			style:opacity={inView ? 1 : 0}>
+			style:opacity={inView ? 1 : 0}> -->
+
 		  <!-- X axis -->
 		  <AxisX
 			gridlines={false}
@@ -258,8 +260,15 @@
 <style>
 	.chart-container {
 		width: 100%;
-		height: 650px;
+		height: 300px;
 		position: relative;
 		pointer-events: all !important;
+	}
+
+	@media (width >= 64rem) {
+        .chart-container {
+			width: 100%;
+			height: 650px;
+		}
 	}
 </style>
