@@ -23,7 +23,7 @@
 
         <!-- Citations -->
         <div class="bg-white border-3 border-black shadow-[6px_6px_0_#000000] p-8 md:p-12 mt-16 w-full max-w-full">
-            <p class="citations uppercase text-4xl mb-8">Citations</p>
+            <p class="citations uppercase text-4xl mb-8">Sources</p>
             <ol class="list-decimal list-outside space-y-2 font-sans pl-5 text-sm md:text-base">
                 {#each content.links as link}
                     <li><a href={link} target='_blank' class="underline break-all [overflow-wrap:anywhere]">{link}</a></li>

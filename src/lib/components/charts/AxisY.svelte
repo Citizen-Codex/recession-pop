@@ -141,11 +141,11 @@
 	.axis-title {
 		position: absolute;
 		top: 0;
-		transform: translateY(-3em);
+		transform: translateY(-7em);
 		font-size: 14px; 
 		color: white;
 		font-family: var(--font-mono);
-		width: 16rem;
+		width: 12rem;
 	}
 	.tick {
 		font-size: 12px;
@@ -163,12 +163,13 @@
 	}
 	.tick .text {
 		color: white;
-	}
+	} 
 
 	@media (width >= 64rem) {
         .axis-title {
 			font-size: 18px;
-			width: auto
+			width: auto;
+			transform: translateY(-3em);
 		}
 
 		.tick {

@@ -73,7 +73,7 @@
 				{@html md(content['content-after'])}
 			</p>
 
-			<div class="mx-auto flex w-80 md:w-96 justify-center">
+			<div class="mx-auto flex max-w-80 md:w-96 justify-center">
 				<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" align="center">
 					<p lang="ca" dir="ltr">
 						actual recession indicator <a href="https://t.co/p3IbuB964D">https://t.co/p3IbuB964D</a>

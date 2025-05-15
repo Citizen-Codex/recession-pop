@@ -56,18 +56,18 @@
 <div class="w-full bg-black">
   <div class="relative flex h-[80vh] w-[92%] md:w-[85%] mx-auto overflow-hidden rounded border-2 border-[#B1B0B0] backdrop-blur-md shadow-[0_0_16px_1px_rgba(45,247,10,0.5)] bg-gradient-to-b from-black/60 to-zinc-700/50 my-20">
 
-    <!-- Top progress bar -->
+    <!-- progress bar -->
     <div
       class="absolute top-0 left-0 h-1 bg-white z-30 transition-all duration-300"
       style="width: {((activeIndex + 1) / content.length) * 100}%"
     ></div>
 
-    <!-- Internal container -->
+    <!-- internal container -->
     <div class="w-full overflow-y-scroll text-scroll scroll-smooth snap-y snap-proximity no-scrollbar">
       <div class="2xl:mx-20 md:mx-4 justify-center">
-        <div class="flex flex-row w-full">
+        <div class="flex flex-row w-full items-stretch h-full">
 
-          <!-- Left: Scrollable Text -->
+          <!-- left column: text -->
           <div class="w-full md:w-[55%] justify-center">
             <div class="flex flex-col relative items-center">
               {#each content as entry, i}
@@ -76,7 +76,7 @@
                   data-index={i}
                   id={`section-${i}`}
                 >
-                  <!-- Year + arrow icon -->
+                  <!-- year + arrow icon -->
                   <div class="flex items-center gap-2">
                     <h1 class="font-robo text-white text-7xl mb-4 md:text-9xl md:mb-8">
                       {@html md(entry.year)}
@@ -84,25 +84,28 @@
                     <iconify-icon icon="pixel:angle-down" class="md:hidden text-white text-2xl md:text-4xl opacity-70 animate-bounce"></iconify-icon>
                   </div>
 
-                  <!-- Mobile Spotify player -->
+                  <!-- spotify player (mobile only) -->
                   <div class="w-full md:hidden flex justify-center flex-col gap-8">
                     <div class="rounded-xl">
                       <div><figure>{@html embed[activeIndex]}</figure></div>
                     </div>
                   </div>
 
-                  <!-- Text Content -->
+                  <!-- text content -->
                   <p class="body text-white pt-0 lg:max-w-xl">
                     {@html md(entry.content)}
                   </p>
                 </div>
               {/each}
+             
             </div>
+            
+            
           </div>
 
-          <!-- Right: Sticky Spotify (desktop only) -->
+          <!-- right: spotify player (desktop only) -->
           <div class="hidden md:block md:w-[45%] relative">
-            <div class="sticky top-1/2 transform -translate-y-1/2 p-8">
+            <div class="sticky top-0 flex flex-col justify-center h-[79.5vh] p-8"> <!-- top-1/2 transform -translate-y-1/2  -->
               <div class="rounded-xl shadow-[0_0_16px_1px_rgba(254,136,249,0.5)] mb-8 mx-4">
                 <figure>{@html embed[activeIndex]}</figure>
               </div>

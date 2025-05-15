@@ -2,7 +2,7 @@
 	import { getContext } from 'svelte';
 	import { fly } from 'svelte/transition';
 
-	const { xRange, percentRange } = getContext('LayerCake');
+	const { xRange, percentRange } = getContext('LayerCake'); 
 
 	/** Moves axis title !IMPORTANT 
 	 * remove this in the axisTitle section if not wanted */
@@ -153,11 +153,11 @@
 	.axis-title {
 		position: absolute;
 		top: 0;
-		transform: translateY(-3em);
+		transform: translateY(-7em) translateX(-0.5em);
 		font-size: 14px; 
 		color: white;
 		font-family: var(--font-mono);
-		width: 16rem;
+		width: 7rem;
 	}
 	.tick {
 		font-size: 12px;
@@ -180,7 +180,8 @@
 	@media (width >= 64rem) {
         .axis-title {
 			font-size: 18px;
-			width: auto
+			width: auto;
+			transform: translateY(-3em)  translateX(0em);
 		}
 
 		.tick {

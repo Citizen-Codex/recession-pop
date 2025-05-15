@@ -33,7 +33,7 @@
     lastBuild = true;
   }
 
-  $: if (!animationStarted && scrollIndex !== 0 && data && xScale && yScale && xDomain?.length > 0) {
+  $: if (!animationStarted && data && xScale && yScale && xDomain?.length > 0) {
     animationStarted = true;
     stopAnimation = false;
     visibleByYear = xDomain.map(() => ({ base: null, animating: [] }));
@@ -108,7 +108,7 @@
 
 
 <!-- Rainbow bars -->
-{#if scrollIndex < 3}
+{#if scrollIndex == undefined || scrollIndex < 3}
   <g in:fade={{ duration: 250 }} out:fade={{ duration: 250 }}>
     {#each visibleByYear as yearSegments, i (i)}
       {#if yearSegments.base}
@@ -253,11 +253,10 @@
     d={gdpLinePath}
     fill="none"
     stroke="#F28E2A"
-    stroke-width="5"
     in:draw={{duration: 2000}}
     out:fade={{duration: 500}}
     pathLength={10}
-    class="fade-in"
+    class="fade-in stroke"
   />
 {/if}
 
@@ -267,11 +266,10 @@
     d={unemLinePath}
     fill="none"
     stroke="#06FF33"
-    stroke-width="5"
     in:draw={{duration: 5000}}
     pathLength={12}
     out:fade={{duration: 500}}
-    class="fade-in"
+    class="fade-in stroke"
   />
 {/if}
 
@@ -359,6 +357,16 @@
   @keyframes fadeIn {
     from  { opacity: 0; }
     to    { opacity: 1; }
+  }
+
+  .stroke {
+    stroke-width: 3;
+  }
+
+  @media (width >= 64rem) {
+    .stroke {
+      stroke-width: 5;
+    }
   }
 
 </style>

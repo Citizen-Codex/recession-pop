@@ -19,12 +19,12 @@
 
 		<img src="assets/icons/green_note.svg"
 		alt="green note icon"
-		class="absolute top-[-80px] left-[-80px]"
+		class="hidden md:block absolute top-[-80px] left-[-80px]"
 		/>
 
 		<img src="assets/icons/money.svg"
 		alt="money icon"
-		class="absolute top-[-40px] right-[20px] md:top-[60px] md:right-[-120px]"
+		class="absolute top-[-40px] right-[20px] md:top-[60px] md:right-[-120px] w-14 md:w-auto"
 		/>
 
 	</div>
