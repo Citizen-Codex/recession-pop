@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
 
@@ -24,7 +24,7 @@
 
 		<img src="assets/icons/money.svg"
 		alt="money icon"
-		class="absolute top-[-40px] right-[20px] md:top-[60px] md:right-[-120px] w-14 md:w-auto"
+		class="absolute top-[-40px] right-[20px] md:top-[60px] md:right-[-100px] w-14 md:w-auto"
 		/>
 
 	</div>

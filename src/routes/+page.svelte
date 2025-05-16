@@ -24,7 +24,7 @@
 	<AudioButtonDivider />
 
 	<!-- Section with divider as background -->
-	<div class="min-h-screen w-full bg-white relative">
+	<div class="min-h-lvh w-full bg-white relative">
 		<div class="absolute rotate-180 bottom-0 z-0">
 		  <Divider type="normal" />
 		</div>
@@ -36,7 +36,7 @@
 	<ChartScrolly />
 
 	<!-- Section with divider as background -->
-	<div class="min-h-screen w-full bg-black relative">
+	<div class="min-h-lvh w-full bg-black relative">
 		<div class="absolute top-[62%] md:top-1/2">
 		  <Divider type="trans" />
 		</div>

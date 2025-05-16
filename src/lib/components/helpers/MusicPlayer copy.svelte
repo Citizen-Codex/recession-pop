@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
   import { page } from '$app/state';
   import md from '$lib/utils/md';
@@ -60,7 +60,7 @@
           <div class="flex flex-col relative max-w-2xl">
             {#each content as entry, i}
               <div
-                class="w-full scroll-section flex flex-row items-start gap-16 min-h-screen px-10 pt-12 snap-start"
+                class="w-full scroll-section flex flex-row items-start gap-16 min-h-lvh px-10 pt-12 snap-start"
                 data-index={i}
                 id={`section-${i}`}
               >
@@ -74,12 +74,12 @@
                 </div>
               </div>
             {/each}
-            <div class="h-screen"></div>
+            <div class="h-lvh"></div>
           </div>
         </div>
 
         <!-- Spotify player -->
-        <div class="sticky top-1/2 -translate-y-1/2 w-[45%] flex items-center justify-center min-h-screen flex-col gap-8 border-blue-600 border-2">
+        <div class="sticky top-1/2 -translate-y-1/2 w-[45%] flex items-center justify-center min-h-lvh flex-col gap-8 border-blue-600 border-2">
           <div class="w-[80%] rounded-xl shadow-[0_0_16px_1px_rgba(254,136,249,0.5)]">
             {@html content[activeIndex]?.embed}
           </div>

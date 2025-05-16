@@ -7,7 +7,7 @@ polyfill from https://github.com/flackr/scroll-timeline
 
 
 
-<script>
+<script lang="ts">
 	
 
 	let albums = [

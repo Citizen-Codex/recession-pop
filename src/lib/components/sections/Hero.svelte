@@ -7,7 +7,7 @@
 </script>
 
 
-<section class="relative flex h-screen w-full flex-col items-center justify-center text-center">
+<section class="relative flex h-svh w-full flex-col items-center justify-center text-center min-h-[650px]">
 	<div class="absolute inset-0 -z-10">
 		<Background />
 	</div>
@@ -17,9 +17,9 @@
 		><Wordmark /></a>
 	</div>
 
-	<div class="relative flex flex-col items-center gap-12">
+	<div class="relative flex flex-col items-center gap-8 md:gap-12 top-8">
 		<!-- Title -->
-		<div class="max-w-4xl px-4">
+		<div class="max-w-2xl md:max-w-4xl px-4">
 			<img src="/assets/header.png" alt="Header" />
 		</div>
 

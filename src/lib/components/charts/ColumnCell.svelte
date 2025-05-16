@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let data = [];
 	export let xDomain = [];
 	export let xScale;

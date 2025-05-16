@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
     import { page } from '$app/state';
     import md from '$lib/utils/md';
 
     const content = page.data['citations']
 </script>
 
-<section class="w-full bg-[#FFC3FC] min-h-screen flex items-center justify-center py-20 md:p-24">
+<section class="w-full bg-[#FFC3FC] min-h-lvh flex items-center justify-center py-20 md:p-24">
     <div class="max-w-3xl mx-auto px-8 md:px-0">
 
         <!-- Credits  -->

@@ -80,14 +80,14 @@
 					</p>
 					&mdash; joanie (@laracroftbarbie)<a
 						href="https://twitter.com/laracroftbarbie/status/1889453220432589195?ref_src=twsrc%5Etfw"
-						>February 11, 2025</a
+						> February 11, 2025</a
 					>
 				</blockquote>
 				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 		</section>
 
-		<div class="min-h-[25vh]"></div>
+		<div class="h-[10lvh] md:h-[25vh]"></div>
 		
 	</div>
 </div>

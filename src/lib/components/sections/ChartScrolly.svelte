@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
 	import Scrolly from '$lib/components/helpers/Scrolly.svelte';
@@ -32,20 +32,20 @@
 <div class="w-full bg-black px-4 md:p-0 mx-auto">
 	<section class="relative top-0 z-0 mx-auto w-4/5 gap-16">
 		<div
-			class="sticky top-0 z-0 m-0 flex min-h-screen items-center justify-center transition-all duration-5000"
+			class="sticky top-0 z-0 m-0 flex min-h-lvh items-center justify-center transition-all duration-5000"
 		>
 			<div class="h-full w-full">
 				<SongsCharts {scrollIndex} {inView} />
 			</div>
 		</div>
 
-		<div class="h-[50vh]" />
+		<div class="h-[50lvh]" />
 
 		<div class="pointer-events-none relative z-10 mx-auto max-w-xl">
 			<Scrolly bind:value={scrollIndex} bind:inView>
 				{#each content.steps as step, i (i)}
 					<div
-						class="pointer-events-auto mb-[90vh] flex flex-col items-center justify-center gap-4"
+						class="pointer-events-auto mb-[90lvh] flex flex-col items-center justify-center gap-4"
 					>
 						<div class="body border-3 border-black bg-white px-4 py-4 md:p-8 {shadowClass} w-full">
 							<p class="text-left">{@html md(step.content)}</p>
@@ -53,13 +53,13 @@
 					</div>
 
 					{#if i === 1}
-						<div class="pointer-events-none h-[100vh] w-full"></div>
+						<div class="pointer-events-none h-[100lvh] w-full"></div>
 					{/if}
 				{/each}
 			</Scrolly>
 		</div>
 
-		<div class="h-[50vh]" />
+		<div class="h-[50lvh]" />
 	</section>
 </div>
 

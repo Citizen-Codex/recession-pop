@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
   
     const segments = [
@@ -81,7 +81,7 @@
     }
   </style>
   
-  <div class="h-screen flex items-center justify-center">
+  <div class="h-lvh flex items-center justify-center">
     <svg width="600" height={chartHeight} style="border: 1px solid #ccc">
       {#each visibleSegments as barSegments, barIndex}
         {#each barSegments as { height, color, y } (y)}

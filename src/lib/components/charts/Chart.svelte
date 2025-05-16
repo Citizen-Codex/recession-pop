@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount, tick } from 'svelte';
   import { animateYear } from '$lib/js/animateBars';
   import { draw, fade } from 'svelte/transition';

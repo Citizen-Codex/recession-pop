@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     export let quote = "";
     export let color = "";
 </script>

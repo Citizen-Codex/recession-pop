@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import md from '$lib/utils/md';
 	import { onMount } from 'svelte';
@@ -90,7 +90,7 @@
 	</script>
 	
 
-<div bind:this={wrapper} class="w-full h-screen overflow-hidden flex flex-col justify-center gap-16 border-blue-500 border-3"> <!--  border-blue-500 border-2 -->
+<div bind:this={wrapper} class="w-full h-lvh overflow-hidden flex flex-col justify-center gap-16 border-blue-500 border-3"> <!--  border-blue-500 border-2 -->
 
 	<div bind:this={albumsContainer} class="w-full overflow-x-hidden">
 	  <div class="inline-flex gap-16 p-4 min-w-max">

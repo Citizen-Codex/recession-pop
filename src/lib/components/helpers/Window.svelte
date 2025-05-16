@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// use slot instead of exporting 'content'
 </script>
 

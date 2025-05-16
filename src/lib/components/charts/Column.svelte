@@ -2,7 +2,7 @@
   @ component
   Generates an SVG column chart.
  -->
-<script>
+<script lang="ts">
 	import { getContext } from 'svelte';
 
 	const { data, xGet, yGet, x, yRange, xScale, y, height } = getContext('LayerCake');

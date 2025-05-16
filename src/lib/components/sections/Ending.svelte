@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Window from '$lib/components/helpers/Window.svelte';
     import AudioPlayer from '$lib/components/helpers/AudioPlayer.svelte';
 	import Quote from '$lib/components/helpers/Quote.svelte';
@@ -8,7 +8,7 @@
 	const content = page.data['ending'];
 </script>
 
-<div class="min-h-screen w-full bg-black">
+<div class="min-h-lvh w-full bg-black">
     <div class="column max-w-7xl">
     <section class="sections text-white max-w-5xl mx-auto md:px-4">
 

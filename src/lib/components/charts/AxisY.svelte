@@ -4,7 +4,7 @@
 
   Although this is marked as a percent-range component, you can also use it with a normal scale with no configuration needed. By default, if you have `percentRange={true}` it will use percentages, otherwise it will use pixels. This makes this component compatible with server-side and client-side rendered charts. Set the `units` prop to either `'%'` or `'px'` to override the default behavior.
  -->
- <script>
+ <script lang="ts">
 	import { getContext } from 'svelte';
   
 	const { xRange, yScale, percentRange } = getContext('LayerCake');
@@ -153,7 +153,7 @@
 		font-family: var(--font-mono);
 	}
 	.gridline {
-		border-top: 0.5px dashed #aaa;
+		border-top: 0.7px dashed #aaa;
 	}
 	.tick-mark {
 		border-top: 1px solid #aaa;

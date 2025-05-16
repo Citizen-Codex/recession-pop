@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * This component manages which item is most in view for scroll triggering
 	 * example:
@@ -48,9 +48,10 @@
 		if (maxRatio > 0) {
 			value = maxIndex;
 			inView = true;
-		} else {
-			inView = false;
-		}
+		} 
+		// else {
+		// 	inView = false;
+		// } --> set this if you want to the thing to disappear when not in view
 	};
 
 	const createObserver = (node, index) => {

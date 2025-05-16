@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { LayerCake, ScaledSvg, Html } from 'layercake';
 	import { scaleBand, scaleLinear } from 'd3-scale';
@@ -30,9 +30,7 @@
 	const yKey = 'index';
 	const gdpByYear = {};
 	const unemByYear = {};
-
-	$: console.log('scrollIndex', scrollIndex);
-
+	
 	onMount(async () => {
 		try {
 			const vibeData = await d3.csv('/data/billboard.csv');
@@ -156,10 +154,10 @@
 
 	<Html>
 		<!-- Main axes container -->
-		<div>
-			<!-- <div
+		
+			<div
 			class="opacity-0 transition-opacity duration-500"
-			style:opacity={inView ? 1 : 0}> -->
+			style:opacity={inView ? 1 : 0}>
 
 		  <!-- X axis -->
 		  <AxisX
