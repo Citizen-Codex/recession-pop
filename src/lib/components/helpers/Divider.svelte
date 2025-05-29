@@ -3,7 +3,7 @@
 </script>
 
 <div class="w-full overflow-hidden">
-  <div class="w-[101%] mx-auto overflow-hidden">
+  <div class="w-[105%] mx-auto overflow-hidden">
     {#if type === 'normal'}
       <img src="assets/divider.png" alt="divider" class="block w-full" />
     {:else if type === 'trans'}
