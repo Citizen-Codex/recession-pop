@@ -258,15 +258,17 @@
 <style>
 	.chart-container {
 		width: 100%;
-		height: 300px;
+		height: 500px;
 		position: relative;
 		pointer-events: all !important;
+		margin-top: 60px;
 	}
 
 	@media (width >= 64rem) {
         .chart-container {
 			width: 100%;
 			height: 650px;
+			margin-top: 0px;
 		}
 	}
 </style>

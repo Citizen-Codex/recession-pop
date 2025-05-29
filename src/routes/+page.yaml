@@ -50,7 +50,7 @@ charts:
     - content: But is the science behind the recession part of recession pop actually true? 
     - content: Recent studies say yes. When tracked against negative macroeconomic indicators like high unemployment, inflation, and interest rates, or major shocks like the COVID pandemic, researchers found that people tend to listen to <a href="https://link.springer.com/article/10.1007/s10902-024-00757-4">happier music</a> with more <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9358113/#Sec19">positive lyrics</a> to alleviate unhappiness, anxiety, and stress.
     - content: As people find their material consumption habits involuntarily altered by recessions, it follows that their cultural consumption and media attitudes would shift as well. 
-    - content: Here’s what that relationship looks like charted.
+    - content: Here’s what that relationship looks like charted. The highlights indicate <span class="bg-[#01EFFE] highlighted">recession years</span> according to the <a href="https://fred.stlouisfed.org/series/GDPC1">Federal Reserve Economic Data</a>.
     - content: As shown, major recessions—marked by dips in the <span class="bg-orange highlighted">real GDP</span> line—tend to coincide with spikes in recession pop music.
     - content: Looking at <span class="bg-green highlighted">unemployment data</span> reveals similar patterns. Across the decades, recession pop revivals have generally aligned with inflections in the yearly unemployment rate, supporting the theory that economic cycles are in some way linked to music consumption.
     - content: So, what comes next? Once the economy has bounced back, you’d assume that the demand for dancey, end-of-the-world, escapist music would fade. Right?
@@ -162,10 +162,17 @@ citations:
       name: Florina Sutanto
   
   links:
-    - https://culturaleconomics.org/songs-of-optimism-for-troubled-times-music-preferences-amid-socio-economic-challenges/  
-    - https://link.springer.com/article/10.1007/s10902-024-00757-4 
-    - https://pmc.ncbi.nlm.nih.gov/articles/PMC9358113/ 
-    - https://www.bowiecreators.com/article/retrospective-on-disco-and-gay-emancipation
-    - https://fashion2fiber.osu.edu/exhibits/show/fashion-and-music/1970s--disco-glam-vs--recessio
-    - https://www.vox.com/culture/2018/7/30/17561470/music-of-inequality
-    - https://www.hotknifemag.com/read-1/towards-a-theory-of-recession-pop 
+    - text: "Songs of Optimism for Troubled Times: Music Preferences Amid Socio-Economic Challenges"
+      url: "https://culturaleconomics.org/songs-of-optimism-for-troubled-times-music-preferences-amid-socio-economic-challenges/"  
+    - text: "The Soundtrack of a Crisis: More Positive Music Preferences During Economic and Social Adversity"
+      url: "https://link.springer.com/article/10.1007/s10902-024-00757-4" 
+    - text: "Music preferences as an instrument of emotional self-regulation along the business cycle"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9358113/"
+    - text: "Retrospective on Disco and Gay Emancipation"
+      url: "https://www.bowiecreators.com/article/retrospective-on-disco-and-gay-emancipation"
+    - text: "1970s: Disco Glam vs. Recession Reality"
+      url: "https://fashion2fiber.osu.edu/exhibits/show/fashion-and-music/1970s--disco-glam-vs--recessio"
+    - text: "How music has responded to a decade of economic inequality"
+      url: "https://www.vox.com/culture/2018/7/30/17561470/music-of-inequality"
+    - text: "Towards a Theory of Recession Pop"
+      url: "https://www.hotknifemag.com/read-1/towards-a-theory-of-recession-pop"

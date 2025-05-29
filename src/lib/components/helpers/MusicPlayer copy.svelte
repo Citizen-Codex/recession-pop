@@ -5,8 +5,17 @@
 
   const content = page.data['music'];
   let activeIndex = 0;
+  let isLargeScreen = false;
+  let embed = [];
+
+  function updateScreenSize() {
+    isLargeScreen = window.innerWidth >= 1024;
+  }
 
   onMount(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,70 +33,92 @@
     const sections = document.querySelectorAll('.scroll-section');
     sections.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener('resize', updateScreenSize);
+      observer.disconnect();
+    };
+  });
+
+  const urls = [
+    "https://open.spotify.com/embed/playlist/0ohVWKOiRdtwWZsOv2Q33X?utm_source=generator&theme=0",
+    "https://open.spotify.com/embed/playlist/2rvNsfhCtoxl3YsRUCUxeV?utm_source=generator&theme=0",
+    "https://open.spotify.com/embed/playlist/0clzFxq5CtcdoBXSoNTE9P?utm_source=generator&theme=0",
+    "https://open.spotify.com/embed/playlist/1hVN4zpLr075BoUOTRCBtB?utm_source=generator&theme=0",
+    "https://open.spotify.com/embed/playlist/3cOJ324fwUzSBnNeLlK026?utm_source=generator&theme=0"
+  ];
+
+  $: embed = urls.map((url) => {
+    const height = isLargeScreen ? 500 : 100;
+    return `<iframe style="border-radius:12px; height:${height}px;" src="${url}" width="100%" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
   });
 </script>
 
 <div class="w-full bg-black">
-    <div class="relative flex h-[80vh] w-[85%] mx-auto overflow-hidden rounded border-2 border-[#B1B0B0] backdrop-blur-md shadow-[0_0_16px_1px_rgba(45,247,10,0.5)] bg-gradient-to-b from-black/60 to-zinc-700/50 my-20">
+  <div class="relative flex h-[80lvh] w-[92%] lg:w-[85%] mx-auto overflow-hidden rounded border-2 border-[#B1B0B0] backdrop-blur-md shadow-[0_0_16px_1px_rgba(45,247,10,0.5)] bg-gradient-to-b from-black/60 to-zinc-700/50 my-20">
 
-      <!-- Pagination dots -->
-      <div class="absolute top-10 left-4 md:top-17 md:left-8 z-20 flex flex-col gap-3">
-        {#each content as _, i}
-          <div
-            on:click={() => {
-              const container = document.querySelector('.text-scroll');
-              const section = document.getElementById(`section-${i}`);
-              if (container && section) {
-                const offset = section.offsetTop - container.offsetTop;
-                container.scrollTo({ top: offset, behavior: 'smooth' });
-              }
-            }}
-            class="w-1.5 h-1.5 md:w-2.5 md:h-2.5 rounded-full border cursor-pointer transition-all duration-300 transform"
-            class:bg-white={activeIndex === i}
-            class:scale-[1.75]={activeIndex === i}
-            class:border-white={activeIndex !== i}
-            class:bg-transparent={activeIndex !== i}
-          ></div>
-        {/each}
-      </div>
-      
-      <!-- Internal container -->
-      <div class="w-full overflow-y-scroll snap-y snap-mandatory text-scroll scroll-smooth no-scrollbar flex flex-row md:px-10">
+    <!-- progress bar -->
+    <div
+      class="absolute top-0 left-0 h-1 bg-white z-30 transition-all duration-300"
+      style="width: {((activeIndex + 1) / content.length) * 100}%"
+    ></div>
 
-        <!-- Text -->
-        <div class="w-[55%] border-amber-600 border-2">
-          <div class="flex flex-col relative max-w-2xl">
-            {#each content as entry, i}
-              <div
-                class="w-full scroll-section flex flex-row items-start gap-16 min-h-lvh px-10 pt-12 snap-start"
-                data-index={i}
-                id={`section-${i}`}
-              >
-                <div class="flex flex-col">
-                  <h1 class="font-robo text-white text-6xl md:text-9xl"> <!-- sticky top-0 -->
-                    {@html md(entry.year)}
-                  </h1>
-                  <p class="body text-white">
+    <!-- internal container -->
+    <div class="w-full overflow-y-scroll text-scroll scroll-smooth snap-y snap-proximity no-scrollbar">
+      <div class="2xl:mx-20 lg:mx-4 justify-center">
+        <div class="flex flex-row w-full items-stretch h-full">
+
+          <!-- left column: text -->
+          <div class="w-full lg:w-[55%] justify-center">
+            <div class="flex flex-col relative items-center">
+              {#each content as entry, i}
+                <div
+                  class="w-full scroll-section min-h-lvh px-6 lg:px-10 pt-12 snap-start"
+                  data-index={i}
+                  id={`section-${i}`}
+                >
+                  <!-- year + arrow icon -->
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-robo text-white text-7xl mb-4 lg:text-9xl lg:mb-8">
+                      {@html md(entry.year)}
+                    </h1>
+                    <iconify-icon icon="pixel:angle-down" class="lg:hidden text-white text-2xl lg:text-4xl opacity-70 animate-bounce"></iconify-icon>
+                  </div>
+
+                  <!-- spotify player (mobile only) -->
+                  <div class="w-full lg:hidden flex justify-center flex-col gap-8">
+                    <div class="rounded-xl">
+                      <div><figure>{@html embed[activeIndex]}</figure></div>
+                    </div>
+                  </div>
+
+                  <!-- text content -->
+                  <p class="body text-white pt-0 lg:max-w-xl">
                     {@html md(entry.content)}
                   </p>
                 </div>
+              {/each}
+             
+            </div>
+            
+            
+          </div>
+
+          <!-- right: spotify player (desktop only) -->
+          <div class="hidden lg:block lg:w-[45%] relative">
+            <div class="sticky top-0 flex flex-col justify-center h-[79.5lvh] p-8"> <!-- top-1/2 transform -translate-y-1/2  -->
+              <div class="rounded-xl shadow-[0_0_16px_1px_rgba(254,136,249,0.5)] mb-8 mx-4">
+                <figure>{@html embed[activeIndex]}</figure>
               </div>
-            {/each}
-            <div class="h-lvh"></div>
+              <div class="flex justify-center">
+                <iconify-icon icon="pixel:angle-down" class="text-white text-2xl lg:text-4xl opacity-70 animate-bounce"></iconify-icon>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Spotify player -->
-        <div class="sticky top-1/2 -translate-y-1/2 w-[45%] flex items-center justify-center min-h-lvh flex-col gap-8 border-blue-600 border-2">
-          <div class="w-[80%] rounded-xl shadow-[0_0_16px_1px_rgba(254,136,249,0.5)]">
-            {@html content[activeIndex]?.embed}
-          </div>
-          <iconify-icon icon="pixel:angle-down" class="text-white h-5 text-4xl opacity-70 animate-bounce"></iconify-icon>
         </div>
-        
-
       </div>
+    </div>
+
   </div>
 </div>
 

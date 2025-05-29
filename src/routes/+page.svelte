@@ -37,15 +37,18 @@
 
 	<!-- Section with divider as background -->
 	<div class="min-h-lvh w-full bg-black relative">
-		<div class="absolute top-[62%] md:top-1/2">
+		<div class="absolute bottom-10 md:bottom-0"> <!-- top-[62%] -->
 		  <Divider type="trans" />
 		</div>
 
 		<Vibecession />
-		<MusicPlayer />
+	
 	  </div>
 	<!--  -->
-	  
+
+	<MusicPlayer />
+
+
 	<Ending />
 	<Citations />
 	<Footer />

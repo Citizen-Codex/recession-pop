@@ -26,7 +26,7 @@
             <p class="citations uppercase text-4xl mb-8">Sources</p>
             <ol class="list-decimal list-outside space-y-2 font-sans pl-5 text-sm md:text-base">
                 {#each content.links as link}
-                    <li><a href={link} target='_blank' class="underline break-all [overflow-wrap:anywhere]">{link}</a></li>
+                    <li><a href={link.url} target='_blank' class="underline">{link.text}</a></li> <!-- break-all [overflow-wrap:anywhere] -->
                 {/each}
             </ol>
         </div>
