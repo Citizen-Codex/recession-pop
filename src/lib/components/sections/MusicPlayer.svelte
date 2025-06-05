@@ -84,23 +84,25 @@
                     data-index={i}
                     id={`section-${i}`}
                   >
-                    <div class="flex items-center gap-2 w-full justify-start text-left">
-                      <h1 class="font-robo text-white text-7xl mb-4 lg:text-9xl lg:mb-8">
-                        {@html md(entry.year)}
-                      </h1>
-                      <iconify-icon icon="pixel:angle-down" class="lg:hidden text-white text-2xl lg:text-4xl opacity-70 animate-bounce"></iconify-icon>
-                    </div>
-
-                    <!-- Spotify embed for mobile -->
-                    <div class="w-full lg:hidden flex justify-center flex-col gap-8">
-                      <div class="rounded-xl">
-                        <figure>{@html embed[i]}</figure>
+                    <div class="w-full lg:max-w-xl mx-auto text-left">
+                      <div class="flex items-center gap-2 mb-4 lg:mb-0">
+                        <h1 class="font-robo text-white text-7xl lg:text-9xl">
+                          {@html md(entry.year)}
+                        </h1>
+                        <iconify-icon icon="pixel:angle-down" class="lg:hidden text-white text-2xl lg:text-4xl opacity-70 animate-bounce"></iconify-icon>
                       </div>
-                    </div>
 
-                    <p class="body text-white pt-0 lg:max-w-xl">
-                      {@html md(entry.content)}
-                    </p>
+                      <!-- Spotify embed for mobile -->
+                      <div class="w-full lg:hidden flex justify-center flex-col gap-8 mb-6">
+                        <div class="rounded-xl">
+                          <figure>{@html embed[i]}</figure>
+                        </div>
+                      </div>
+
+                      <p class="body text-white">
+                        {@html md(entry.content)}
+                      </p>
+                    </div>
                   </div>
 
                 {/each}
