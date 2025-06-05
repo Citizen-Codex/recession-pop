@@ -7,7 +7,7 @@
 </script>
 
 
-<section class="relative flex h-svh w-full flex-col items-center justify-center text-center min-h-[650px]">
+<section class="relative flex h-svh w-full flex-col items-center justify-center text-center min-h-[650px] mb-[-1px]">
 	<div class="absolute inset-0 -z-10">
 		<Background />
 	</div>
@@ -42,7 +42,7 @@
 			<img 
 			  src="assets/icons/cursor.svg" 
 			  alt="notes icon" 
-			  class="absolute right-4 md:right-[-8vw] top-40 w-12 md:w-auto"
+			  class="absolute right-6 md:right-[-8vw] top-40 w-10 md:w-auto"
 			/>
 		  </div>
 		  

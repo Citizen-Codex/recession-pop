@@ -15,16 +15,16 @@ intro:
 
     Or so the internet says.
   content-after: >
-    More than a decade later, it seems like the formula still holds true: the winds of recession are being foretold by dance songs. Eggs are $5 a dozen, there’s a major hiring freeze, and music has cycled back to the familiar beats of recession pop.
+    More than a decade later, it seems like the formula still holds true: the winds of recession are being foretold by dance songs. Tariff wars are blazing, workers are being laid off in droves, and music has cycled back to the familiar beats of recession pop.
     
-
+    
     As Lady Gaga herself puts it in her newest song: “Dance…or die.”
 
 albums:
   steps:
-    - content: Last summer, songs from Charli XCX’s “Brat” album duked it out with Sabrina Carpenter’s “Espresso” and Chappell Roan’s “HOT TO GO!” for airtime in radios, clubs, and college parties across the nation. (All three artists also just won big at the Grammys.)
-    - content: This turn towards music you can dance-your-heart-out-to harks back to the genre that reigned supreme between 2008-2012.
-    - content: “Recession pop,” as coined by users on TikTok last year, refers to the music that soundtracked the Great Recession of 2008, with songs like “I Gotta Feeling” by The Black Eyed Peas, “Tik Tok” by Kesha, and “Party in the USA” by Miley Cyrus. 
+    - content: Last summer, songs from Charli XCX’s "Brat" album duked it out with Sabrina Carpenter’s “Espresso” and Chappell Roan’s “Hot to Go!” for airtime on the radio, in clubs, and at college parties across the country. All three artists went on to win big at the 2025 Grammys.
+    - content: This turn toward music you can dance your heart out to harks back to the genre that reigned supreme from 2008 to 2012.
+    - content: “Recession pop,” as coined by TikTok users last year, refers to the music that soundtracked the Great Recession of 2008, with songs like “I Gotta Feeling” by The Black Eyed Peas, “Tik Tok” by Kesha, and “Party in the U.S.A.” by Miley Cyrus. 
     - content: These songs promised the anxious masses a good time tonight, every night, away from the economic turmoil raging outside. 
 
 
@@ -46,7 +46,7 @@ charts:
 
 
         These scores represent Spotify-based measures calculated through an algorithmic assessment of tempo, rhythm, dynamic range, and loudness.
-    - content: Here are the songs that kept spirits high and bodies moving on the dance floor. Hover to explore!
+    - content: Here are the songs that kept spirits high and bodies moving on the dance floor. Hover over each block to explore!
     - content: But is the science behind the recession part of recession pop actually true? 
     - content: Recent studies say yes. When tracked against negative macroeconomic indicators like high unemployment, inflation, and interest rates, or major shocks like the COVID pandemic, researchers found that people tend to listen to <a href="https://link.springer.com/article/10.1007/s10902-024-00757-4">happier music</a> with more <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9358113/#Sec19">positive lyrics</a> to alleviate unhappiness, anxiety, and stress.
     - content: As people find their material consumption habits involuntarily altered by recessions, it follows that their cultural consumption and media attitudes would shift as well. 
@@ -82,45 +82,46 @@ vibe:
 music:
   - year: '<span style="color:#A6F9FF">1970</span>'
     content: |
-      The early 70s were tense. Massive social and political shifts swept the nation as it grappled with the aftermath of the Stonewall riots, the ongoing Vietnam War, and the fight for civil rights, all while an oil crisis sparked an economic decline.
+      In the early 70s, massive social and political shifts swept the nation as it grappled with the aftermath of the Stonewall riots, the ongoing Vietnam War, and the fight for civil rights, all while an oil crisis sparked an economic decline. 
 
+      Out of these turbulent years came the disco scene, where Black, Latino, and gay communities found liberation, self-expression, and freedom through exuberant fashion and music on the dance floor. Disco left the underground clubs of New York and Philadelphia and hit the mainstream after the dance film "Saturday Night Fever" found global commercial success in the late 70s. 
 
-      Out of these turbulent years came the disco scene, where Black, Latino, and gay communities could find liberation, self-expression, and freedom through exuberant fashion and music on the dance floor. Disco left the underground clubs of New York and Philadelphia and hit mainstream popularity after the release of the dance film Saturday Night Fever, achieving global commercial success in the late 70s.
     embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0ohVWKOiRdtwWZsOv2Q33X?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#FFD000">1980</span>'
     content: |
-      Recession returned in the early 80s as tightening monetary policies caused unemployment to jump to 10% by 1982. At the same time, the music industry adopted digital and electronic technologies such as synthesizers, drum machines, and computer-based productions, giving rise to electronic dance music (EDM) and influencing genres like new wave, R&B, and rock.
+      Recession returned in the early 80s as tightening monetary policies caused unemployment to jump to 10% by <a href="https://www.federalreservehistory.org/essays/recession-of-1981-82#:~:text=The%20economy%20officially%20entered%20a,10%20percent%20a%20year%20later">1982</a>. At the same time, the music industry adopted digital and electronic technologies such as synthesizers, drum machines, and computer-based productions, giving rise to electronic dance music (EDM) and influencing genres like new wave, R&B, and rock. 
 
+      The 1980s also ushered in a revolutionizing force in the American entertainment industry: MTV. The channel popularized music videos as a key promotional tool for shaping an artist's image and connecting with audiences. This strategy propelled artists like Madonna, Prince, and Michael Jackson into superstardom as visual storytelling and <a href="https://www.biography.com/musicians/how-michael-jackson-changed-dance-history">dance choreography</a> became integral to their music. 
 
-      The 1980s also ushered in a revolutionizing force in the American entertainment industry: MTV. The channel popularized music videos as a key promotional tool for shaping an artist's image and connecting with audiences. This strategy propelled artists like Madonna, Prince, and Michael Jackson into superstardom as visual storytelling and dance choreography became integral to their music.
     embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2rvNsfhCtoxl3YsRUCUxeV?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#957AFF">1990</span>'
     content: |
       Unlike previous decades, the 90s economy boomed. Following a brief and mild recession in the early years, the U.S. entered a period of sustained economic expansion marked by robust job growth, rapid technological advancement, and rising productivity.
 
-      Electronic music continued to evolve, drawing inspiration from Europe’s techno, rave, and drum & bass scene. But the radios were dominated by a diverse mix of other genres: alternative rock bands like Nirvana, R&B soloists like Mariah Carey and Whitney Houston, boy bands and girl groups, and pioneers of the golden age of hip hop.
-      
-      Perhaps the popularity of these other genres, combined with the absence of a major recession, kept the escapist recession pop songs of previous decades off the Billboard charts. It wouldn’t be long, though, before they came back with a vengeance.
+      Electronic music continued to evolve, drawing <a href="https://6amgroup.com/articles/guides-all/an-intro-to-90s-techno-history-artists-labels">inspiration</a> from Europe’s techno, rave, and drum & bass scene. But the radios were dominated by a diverse mix of other genres: alternative rock bands like Nirvana, R&B soloists like Mariah Carey and Whitney Houston, boy bands and girl groups, and pioneers of the golden age of hip hop.
+ 
+      Perhaps the popularity of these other genres, combined with the absence of a major recession, kept the escapist recession pop songs of previous decades off the Billboard charts. It wouldn’t be long, though, before they came back with a vengeance. 
+
     embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0clzFxq5CtcdoBXSoNTE9P?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#FE88F9">2000<span style="font-size:80%;">s</span></span>'
     content: |
-      The next two decades were marked by two significant recessions: the dot-com crash of 2001, soon overshadowed by the Great Recession of 2007–2009, which toppled major banks and triggered millions of home foreclosures.
-    
-      These were the true recession pop years. Think Katy Perry, Lady Gaga, Kesha, The Black Eyed Peas, Rihanna, Pitbull. Think blissed-out club hits about living it up and going out tonight. If you can’t make rent tomorrow anyway, might as well spend your last $10 on drinks!
-      
-      While the recession was declared contained by June 2009, this genre didn’t peak until 2011-2012, making up 25% of the top 100 Billboard songs for the year. Even as the economy slowly began to recover, it was clear that the public needed this outlet, if only as a coping mechanism to weather the brutal aftershocks that lingered in their lives. 
+      The next two decades were marked by two significant recessions: the dot-com crash of 2001, soon overshadowed by the Great Recession of 2007–2009, which toppled major banks and triggered millions of home foreclosures. 
+
+      These were the <i>true</i> recession pop years. Think Katy Perry, Lady Gaga, Kesha, The Black Eyed Peas, Rihanna, Pitbull. Think blissed-out club hits about living it up and going out tonight. If you can’t make rent tomorrow anyway, might as well spend your last $10 on drinks! 
+
+      While the recession was declared contained by June 2009, this genre didn’t peak until 2011-2012, making up 25% of the top 100 Billboard songs for the year. Even as the economy slowly began to recover, it was clear that the public needed this outlet, if only as a coping mechanism to weather the brutal aftershocks that lingered in their lives.
+
     embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1hVN4zpLr075BoUOTRCBtB?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
   - year: '<span style="color:#44FF8F">2020</span>'
     content: |
-      Music of the early 2020s was indelibly marked by the COVID-19 lockdowns. When Taylor Swift dropped folklore and evermore as surprise gifts for everyone stuck at home, the escapism she offered was more stripped-down. It was colored by romanticism, grief, and nostalgia compared to the frenetic energy of past recession pop.
+      Music of the early 2020s was indelibly marked by the COVID-19 lockdowns. When Taylor Swift dropped "folklore" and "evermore" as surprise gifts for everyone stuck at home, the escapism she offered was more stripped-down, colored by romanticism, grief, and nostalgia compared to the frenetic energy of past recession pop. 
 
-      Now, with clubs fully reopened and festivals back in full swing, music has returned to the sonic cheer of the late aughts, despite not having a recession to accompany it. Beyonce’s Renaissance paid homage to Black dance music through an eclectic blend of disco, house, and ballroom. Chappell Roan’s meteoric rise to fame last year brought back slumber party pop and fun “Y.M.C.A.”-esque crowd choreography.   
-       
-      Moreover, if you haven’t heard of Charli XCX’s Brat, were you even around last summer? Though its songs did not make it to the Billboard year-end charts (perhaps because the album begs for a full listen in its entirety), its wild, frenzied soundscape evokes the party anthems of the Great Recession, despite being released during a relatively good year for the economy.
+      Now, with clubs fully reopened and festivals back in full swing, music has rebounded with the sonic cheer of the late aughts, even without a recession to match. Beyonce’s "Renaissance" paid tribute to Black dance music through an vibrant fusion of disco, house, and ballroom. Chappell Roan’s meteoric rise to fame last year revived slumber party pop and fun “Y.M.C.A.”-esque crowd choreography. And the wild, frenzied soundscape of Charli XCX’s "Brat" echoed the party anthems of the Great Recession, despite being released during a <a href="https://www.commerce.gov/news/blog/2024/11/commerce-data-show-strong-economic-gains-due-americans-making-and-spending-more">relatively good year</a> for the economy. 
+
     embed: <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3cOJ324fwUzSBnNeLlK026?utm_source=generator&theme=0" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 
@@ -150,7 +151,7 @@ ending:
       before my time is up
 
   content-after: >
-    The economic truth is one thing, but our perception of it is another. The fabric of our lived reality—what we read on the internet, hear on the news, or talk to other people about—plays a greater role in shaping our perspective on the world than objective indicators like GDP growth or inflation rates. So it makes sense that we continue to crave these escapist party anthems even when a recession is over. When groceries are expensive and saving for retirement feels like a pipe dream, who says we’re <b><i>not</b></i> still in one?
+    The economic truth is one thing, but our perception of it is another. The fabric of our lived reality—what we read on the internet, hear on the news, or talk to other people about—plays a greater role in shaping our perspective on the world than objective indicators like GDP growth or inflation rates. So it makes sense that we continue to crave these escapist party anthems even when it's unclear whether we're in a recession. When groceries are expensive and saving for retirement feels like a pipe dream, who says we’re <b><i>not</b></i> still in one?
 
 citations:
   credits:

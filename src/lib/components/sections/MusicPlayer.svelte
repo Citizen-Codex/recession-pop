@@ -59,7 +59,8 @@
   <!-- All content on top -->
   <div class="relative z-10">
     <!-- Sticky top bar with progress -->
-    <div class="sticky top-0 z-50 bg-black border-b-2 border-b-[#B1B0B0] mx-auto w-[90%] lg:w-[85%] overflow-hidden">
+    <div class="sticky top-0 z-50 bg-black mx-auto w-[90%] lg:w-[85%] overflow-hidden"
+         style="border-bottom: 4px groove #B1B0B0">
       <div class="h-15 relative">
         <div
           class="absolute bottom-0 left-0 h-1 bg-white transition-all duration-300 shadow-[0px_0_16px_1px_rgba(45,247,10,1)]"
@@ -69,7 +70,7 @@
     </div>
 
     <!-- Main scrollable content -->
-    <div class="relative flex mx-auto border-x-2 border-b-2 md:border-b-0 border-[#B1B0B0] backdrop-blur-md bg-gradient-to-b from-black/60 to-zinc-700/50 w-[90%] lg:w-[85%] z-10">
+    <div class="relative flex mx-auto border-x-2 md:border-x-4 border-b-2 md:border-b-0 border-[#B1B0B0] backdrop-blur-md bg-gradient-to-b from-black/60 to-zinc-700/50 w-[90%] lg:w-[85%] z-10">
       <div class="w-full text-scroll scroll-smooth snap-y snap-proximity">
         <div class="2xl:mx-20 lg:mx-4 justify-center">
           <div class="flex flex-row w-full">
@@ -79,11 +80,11 @@
               <div class="flex flex-col relative items-center">
                 {#each content as entry, i}
                   <div
-                    class="w-full scroll-section min-h-screen px-6 lg:px-10 pt-12 snap-start"
+                    class="w-full scroll-section min-h-[90lvh] px-6 lg:px-10 pt-12 snap-start flex flex-col justify-center items-center"
                     data-index={i}
                     id={`section-${i}`}
                   >
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 w-full justify-start text-left">
                       <h1 class="font-robo text-white text-7xl mb-4 lg:text-9xl lg:mb-8">
                         {@html md(entry.year)}
                       </h1>
@@ -101,6 +102,7 @@
                       {@html md(entry.content)}
                     </p>
                   </div>
+
                 {/each}
               </div>
             </div>
@@ -125,6 +127,7 @@
     </div>
 
     <!-- Sticky footer bar -->
-    <div class="hidden md:flex sticky bottom-0 h-15 bg-black z-50 border-t-2 border-t-[#B1B0B0] mx-auto w-[90%] lg:w-[85%]"></div>
+    <div class="hidden md:flex sticky bottom-0 h-15 bg-black z-50 mx-auto w-[90%] lg:w-[85%]"
+        style="border-top: 4px ridge #B1B0B0"></div>
   </div>
 </div>

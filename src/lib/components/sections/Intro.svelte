@@ -18,7 +18,7 @@
 			</p>
 
 			<p class="body pb-0">
-				Lady Gaga’s new single
+				Lady Gaga’s February single
 				
 				<AudioPlayer
 					source={'assets/songs/ladygaga_abracadabra.mp3'}
@@ -31,7 +31,7 @@
 				
 				has her fans rejoicing the return of <a href="https://www.2470mag.com/old-tesramnet-gaga-is/" class="underline">Old Testament Gaga</a>.
 
-				With its devilish imagery and dancey, chanty electro-house style, her song evokes an era when iconic hits like <AudioPlayer
+				With its devilish imagery and dancey, chanty electro-house beats, her song evokes an era when iconic hits like <AudioPlayer
 				source={'assets/songs/ladygaga_justdance.mp3'}
 				start={'0:40'}
 				stop={'1:05'}
